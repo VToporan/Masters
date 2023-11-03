@@ -1,0 +1,40 @@
+Problem theme for PhD requirements:
+  - close to the requirements for funding (when necessary)
+  - interesting enough to be bearable for several years (2-4 depending on region)
+  - mathematical aspect
+  - tools / equipment
+  - where to publish
+
+Focus:
+  - a set of (<10) papers that define the problem domain
+  - understand what they say / don't say
+  - propose a problem that makes sense
+  - don't think about other problems
+  - say goodbye to your friends
+
+Issues:
+  - difficult
+  - min 60h / week
+  - sleepless nights
+  - doubting yourself
+  - doubting your sanity
+
+Find papers:
+  - approximately 150 papers cited for PhD (50 for masters)
+  - read abstract, conclusion and references
+
+Publish:
+  - start small, publish at the same place you read from
+  - go to specific conferences every year
+  - network with your peers and get yourself known
+
+Sources:
+  - conference proceedings
+  - regular journal article
+  - reviews / surveys
+  - recent PhD thesis (provides state of the art and future work)
+
+Journals:
+  - IEEE and ACM transactions have the greatest weight
+  - very thorough review process - up to 2 years
+  - must be a substantial contribution
