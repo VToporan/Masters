@@ -1,0 +1,233 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{withSampling}{article}{}
+      \name{author}{2}{}{%
+        {{hash=daf52dc0f1ae6f80f9e571661fbafebc}{%
+           family={Yadid-Pecht},
+           familyi={Y\bibinithyphendelim P\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+        {{hash=36ea65ff660e77fd5680a8db1ee925d3}{%
+           family={Fossum},
+           familyi={F\bibinitperiod},
+           given={E.R.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{44a88d4663b6a8d712ea9755c59fff97}
+      \strng{fullhash}{44a88d4663b6a8d712ea9755c59fff97}
+      \strng{bibnamehash}{44a88d4663b6a8d712ea9755c59fff97}
+      \strng{authorbibnamehash}{44a88d4663b6a8d712ea9755c59fff97}
+      \strng{authornamehash}{44a88d4663b6a8d712ea9755c59fff97}
+      \strng{authorfullhash}{44a88d4663b6a8d712ea9755c59fff97}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Electron Devices}
+      \field{number}{10}
+      \field{title}{Wide intrascene dynamic range CMOS APS using dual sampling}
+      \field{volume}{44}
+      \field{year}{1997}
+      \field{pages}{1721\bibrangedash 1723}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/16.628828
+      \endverb
+      \keyw{Dynamic range;Sampling methods;Space technology;Charge coupled devices;Lighting;Colored noise;Capacitors;Layout;Noise measurement;Mechanical sensors}
+    \endentry
+    \entry{withTime}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7b06ea0e69ebdf91d7d53dd5338ca141}{%
+           family={Hamamoto},
+           familyi={H\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=078860c8eb64533763abc01087619dbf}{%
+           family={Aizawa},
+           familyi={A\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc9a9b2c45d8ece70e8f74d08bab1684}
+      \strng{fullhash}{dc9a9b2c45d8ece70e8f74d08bab1684}
+      \strng{bibnamehash}{dc9a9b2c45d8ece70e8f74d08bab1684}
+      \strng{authorbibnamehash}{dc9a9b2c45d8ece70e8f74d08bab1684}
+      \strng{authornamehash}{dc9a9b2c45d8ece70e8f74d08bab1684}
+      \strng{authorfullhash}{dc9a9b2c45d8ece70e8f74d08bab1684}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Journal of Solid-State Circuits}
+      \field{number}{4}
+      \field{title}{A computational image sensor with adaptive pixel-based integration time}
+      \field{volume}{36}
+      \field{year}{2001}
+      \field{pages}{580\bibrangedash 585}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/4.913735
+      \endverb
+      \keyw{Image sensors;Pixel;CMOS image sensors;Dynamic range;Motion detection;Layout;Signal resolution;Signal to noise ratio;Parallel processing;Circuits}
+    \endentry
+    \entry{withTable}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=f2096b8da2ce5792ffd871398f8301df}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Shuang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=af2b7d08d624245cf23e77fdd15d4430}{%
+           family={Mu},
+           familyi={M\bibinitperiod},
+           given={Yusong},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dc50b3a0368a08cb21133bcf1905cf26}{%
+           family={Ding},
+           familyi={D\bibinitperiod},
+           given={Ning},
+           giveni={N\bibinitperiod}}}%
+        {{hash=a1faa9e238f881ca5d4e82cdbe88339e}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Jiaqi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=41f64e532e59f1d17af930928b04cd83}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Yuchun},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a6b5dd8119aad152d242df5f458d815}
+      \strng{fullhash}{5009edc325e1e22b3e0c9674901c2c25}
+      \strng{bibnamehash}{5009edc325e1e22b3e0c9674901c2c25}
+      \strng{authorbibnamehash}{5009edc325e1e22b3e0c9674901c2c25}
+      \strng{authornamehash}{0a6b5dd8119aad152d242df5f458d815}
+      \strng{authorfullhash}{5009edc325e1e22b3e0c9674901c2c25}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2018 IEEE International Conference on Integrated Circuits, Technologies and Applications (ICTA)}
+      \field{title}{Combined Linear-Logarithmic CMOS Image Sensor with FPN Calibration}
+      \field{year}{2018}
+      \field{pages}{128\bibrangedash 129}
+      \range{pages}{2}
+      \verb{doi}
+      \verb 10.1109/CICTA.2018.8706097
+      \endverb
+      \keyw{Dynamic range;Charge transfer;CMOS image sensors;Phototransistors;Switches;Photodiodes;Photoconductivity;CMOS image sensor;linear-logarithmic response;phototransistor;fixed pattern noise}
+    \endentry
+    \entry{withScience}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5710284be5c14ff62f1c8a3d34ef9e56}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Jian},
+           giveni={J\bibinitperiod}}}%
+        {{hash=a48485960fb96c436ae05f8a798143e0}{%
+           family={Sonkusale},
+           familyi={S\bibinitperiod},
+           given={Sameer},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{1ea43959c960d0bd6d664c66a20d013c}
+      \strng{fullhash}{1ea43959c960d0bd6d664c66a20d013c}
+      \strng{bibnamehash}{1ea43959c960d0bd6d664c66a20d013c}
+      \strng{authorbibnamehash}{1ea43959c960d0bd6d664c66a20d013c}
+      \strng{authornamehash}{1ea43959c960d0bd6d664c66a20d013c}
+      \strng{authorfullhash}{1ea43959c960d0bd6d664c66a20d013c}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Sensors Journal}
+      \field{number}{10}
+      \field{title}{A High Dynamic Range CMOS Image Sensor for Scientific Imaging Applications}
+      \field{volume}{9}
+      \field{year}{2009}
+      \field{pages}{1209\bibrangedash 1218}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/JSEN.2009.2029814
+      \endverb
+      \keyw{Dynamic range;CMOS image sensors;Optical imaging;Pixel;Sensor arrays;CMOS technology;Optical sensors;Lighting;Image reconstruction;Image sensors;CMOS image sensor;high dynamic range;linear-logarithmic switching point;scientific imaging}
+    \endentry
+    \entry{withCompensation}{article}{}
+      \name{author}{6}{}{%
+        {{hash=f2096b8da2ce5792ffd871398f8301df}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Shuang},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a4202eba7305185b3332f8989e9168fc}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zhaohan},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=3ad93e4c675a68a22a9c2c52b38e2751}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chao},
+           giveni={C\bibinitperiod}}}%
+        {{hash=939d2df7112b958413735938ef53038a}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Xiaotian},
+           giveni={X\bibinitperiod}}}%
+        {{hash=0343aef08a86bb83efb2670a1f7bb8f6}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Xinyang},
+           giveni={X\bibinitperiod}}}%
+        {{hash=41f64e532e59f1d17af930928b04cd83}{%
+           family={Chang},
+           familyi={C\bibinitperiod},
+           given={Yuchun},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e924b2067404339f9042ff0bb6df463}
+      \strng{fullhash}{6cbe759940bb06a79d11365bb0fbe7ed}
+      \strng{bibnamehash}{6cbe759940bb06a79d11365bb0fbe7ed}
+      \strng{authorbibnamehash}{6cbe759940bb06a79d11365bb0fbe7ed}
+      \strng{authornamehash}{2e924b2067404339f9042ff0bb6df463}
+      \strng{authorfullhash}{6cbe759940bb06a79d11365bb0fbe7ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Electron Devices}
+      \field{number}{7}
+      \field{title}{A Charge Compensation Phototransistor for High-Dynamic-Range CMOS Image Sensors}
+      \field{volume}{65}
+      \field{year}{2018}
+      \field{pages}{2932\bibrangedash 2938}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/TED.2018.2837140
+      \endverb
+      \keyw{Phototransistors;Photodiodes;Dynamic range;Optical switches;Optical sensors;Mathematical model;Charge compensation phototransistor;CMOS image sensor (CIS);high-dynamic range (HDR)}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

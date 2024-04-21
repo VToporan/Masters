@@ -1,0 +1,653 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{36}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ae639af4d7c746408e54bb5e4ef41bcf}{%
+           family={{J. Rabaey, F. Burghardt, D. Steingart, M. Seeman, P. Wright}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \strng{namehash}{ae639af4d7c746408e54bb5e4ef41bcf}
+      \strng{fullhash}{ae639af4d7c746408e54bb5e4ef41bcf}
+      \strng{bibnamehash}{ae639af4d7c746408e54bb5e4ef41bcf}
+      \strng{authorbibnamehash}{ae639af4d7c746408e54bb5e4ef41bcf}
+      \strng{authornamehash}{ae639af4d7c746408e54bb5e4ef41bcf}
+      \strng{authorfullhash}{ae639af4d7c746408e54bb5e4ef41bcf}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{International Electron Devices Meeting (IEDM 2007)}}
+      \field{title}{Energy Harvesting - A Systems Perspective}
+      \field{year}{2007}
+      \field{pages}{{363\bibrangedash 366}}
+      \range{pages}{-1}
+    \endentry
+    \entry{113}{article}{}
+      \name{author}{1}{}{%
+        {{hash=eca9670c59b722b39ea6ef2282cae925}{%
+           family={{D. E. Geer Jr., D. G. Conway}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{eca9670c59b722b39ea6ef2282cae925}
+      \strng{fullhash}{eca9670c59b722b39ea6ef2282cae925}
+      \strng{bibnamehash}{eca9670c59b722b39ea6ef2282cae925}
+      \strng{authorbibnamehash}{eca9670c59b722b39ea6ef2282cae925}
+      \strng{authornamehash}{eca9670c59b722b39ea6ef2282cae925}
+      \strng{authorfullhash}{eca9670c59b722b39ea6ef2282cae925}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Security \& Privacy}
+      \field{number}{6}
+      \field{title}{Security Is a Subset of Reliability}
+      \field{volume}{6}
+      \field{year}{2008}
+    \endentry
+    \entry{114}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ea4376f909aecd8b00757ba2d692d237}{%
+           family={{M. Zhivich, R. K. Cunningham}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{ea4376f909aecd8b00757ba2d692d237}
+      \strng{fullhash}{ea4376f909aecd8b00757ba2d692d237}
+      \strng{bibnamehash}{ea4376f909aecd8b00757ba2d692d237}
+      \strng{authorbibnamehash}{ea4376f909aecd8b00757ba2d692d237}
+      \strng{authornamehash}{ea4376f909aecd8b00757ba2d692d237}
+      \strng{authorfullhash}{ea4376f909aecd8b00757ba2d692d237}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Security \& Privacy}
+      \field{number}{2}
+      \field{title}{The Real Cost of Software Errors}
+      \field{volume}{7}
+      \field{year}{2009}
+      \field{pages}{{87\bibrangedash 90}}
+      \range{pages}{-1}
+    \endentry
+    \entry{95}{book}{}
+      \name{author}{1}{}{%
+        {{hash=dfeadf57315ce412d8b3a2b00714a47e}{%
+           family={{W. Weber, J. M. Rabaey, E. Aerts}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{dfeadf57315ce412d8b3a2b00714a47e}
+      \strng{fullhash}{dfeadf57315ce412d8b3a2b00714a47e}
+      \strng{bibnamehash}{dfeadf57315ce412d8b3a2b00714a47e}
+      \strng{authorbibnamehash}{dfeadf57315ce412d8b3a2b00714a47e}
+      \strng{authornamehash}{dfeadf57315ce412d8b3a2b00714a47e}
+      \strng{authorfullhash}{dfeadf57315ce412d8b3a2b00714a47e}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-23867-6}
+      \field{title}{{Ambient Intelligence}}
+      \field{year}{2007}
+    \endentry
+    \entry{3}{book}{}
+      \name{author}{1}{}{%
+        {{hash=4f42bf8ca535daef793e3391b57dcbaf}{%
+           family={Abbas},
+           familyi={A\bibinitperiod},
+           given={Ahmar},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Charles River Media}%
+      }
+      \strng{namehash}{4f42bf8ca535daef793e3391b57dcbaf}
+      \strng{fullhash}{4f42bf8ca535daef793e3391b57dcbaf}
+      \strng{bibnamehash}{4f42bf8ca535daef793e3391b57dcbaf}
+      \strng{authorbibnamehash}{4f42bf8ca535daef793e3391b57dcbaf}
+      \strng{authornamehash}{4f42bf8ca535daef793e3391b57dcbaf}
+      \strng{authorfullhash}{4f42bf8ca535daef793e3391b57dcbaf}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1584502762}
+      \field{title}{{Grid Computing: A Practical Guide to Technology and Applications}}
+      \field{year}{2004}
+    \endentry
+    \entry{8}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=c7eb527335e18e429bdb176032d41e1f}{%
+           family={{Anirban Chakrabarti, A. Damodarani, S. Sengupta}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7eb527335e18e429bdb176032d41e1f}
+      \strng{fullhash}{c7eb527335e18e429bdb176032d41e1f}
+      \strng{bibnamehash}{c7eb527335e18e429bdb176032d41e1f}
+      \strng{authorbibnamehash}{c7eb527335e18e429bdb176032d41e1f}
+      \strng{authornamehash}{c7eb527335e18e429bdb176032d41e1f}
+      \strng{authorfullhash}{c7eb527335e18e429bdb176032d41e1f}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{IEEE Security \& Privacy}}
+      \field{number}{1}
+      \field{title}{Grid Computing Security. A Taxonomy}
+      \field{volume}{6}
+      \field{year}{2008}
+    \endentry
+    \entry{9}{book}{}
+      \name{author}{1}{}{%
+        {{hash=be6c53d84f70efe132aa1939dfe943d9}{%
+           family={Chakrabarti},
+           familyi={C\bibinitperiod},
+           given={Anirban},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer-Verlag}%
+      }
+      \strng{namehash}{be6c53d84f70efe132aa1939dfe943d9}
+      \strng{fullhash}{be6c53d84f70efe132aa1939dfe943d9}
+      \strng{bibnamehash}{be6c53d84f70efe132aa1939dfe943d9}
+      \strng{authorbibnamehash}{be6c53d84f70efe132aa1939dfe943d9}
+      \strng{authornamehash}{be6c53d84f70efe132aa1939dfe943d9}
+      \strng{authorfullhash}{be6c53d84f70efe132aa1939dfe943d9}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-540-44492-3}
+      \field{title}{{Grid Computing Security}}
+      \field{year}{2007}
+    \endentry
+    \entry{19}{book}{}
+      \name{author}{1}{}{%
+        {{hash=c3857da93ddae5c7259486914e175922}{%
+           family={Petcu},
+           familyi={P\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Eubeea}%
+      }
+      \strng{namehash}{c3857da93ddae5c7259486914e175922}
+      \strng{fullhash}{c3857da93ddae5c7259486914e175922}
+      \strng{bibnamehash}{c3857da93ddae5c7259486914e175922}
+      \strng{authorbibnamehash}{c3857da93ddae5c7259486914e175922}
+      \strng{authornamehash}{c3857da93ddae5c7259486914e175922}
+      \strng{authorfullhash}{c3857da93ddae5c7259486914e175922}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Arhitecturi si tehnologii grid}}
+      \field{year}{2006}
+      \field{pages}{{118\bibrangedash 165}}
+      \range{pages}{-1}
+    \endentry
+    \entry{30}{book}{}
+      \name{author}{1}{}{%
+        {{hash=04b559a96eab1cb3fde239f58a600eec}{%
+           family={{Ian Foster, C. Kesselman}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Morgan Kaufmann Publishers}%
+      }
+      \strng{namehash}{04b559a96eab1cb3fde239f58a600eec}
+      \strng{fullhash}{04b559a96eab1cb3fde239f58a600eec}
+      \strng{bibnamehash}{04b559a96eab1cb3fde239f58a600eec}
+      \strng{authorbibnamehash}{04b559a96eab1cb3fde239f58a600eec}
+      \strng{authornamehash}{04b559a96eab1cb3fde239f58a600eec}
+      \strng{authorfullhash}{04b559a96eab1cb3fde239f58a600eec}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1-55860-475-8}
+      \field{title}{{The Grid: Blueprint for a Future Computing Infrastructure}}
+      \field{year}{1998}
+    \endentry
+    \entry{32}{book}{}
+      \name{author}{1}{}{%
+        {{hash=eb402fa215742fc348e3ea8b324211a0}{%
+           family={{Ian Foster}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Argonne National Laboratory \& University of Chicago}%
+      }
+      \strng{namehash}{eb402fa215742fc348e3ea8b324211a0}
+      \strng{fullhash}{eb402fa215742fc348e3ea8b324211a0}
+      \strng{bibnamehash}{eb402fa215742fc348e3ea8b324211a0}
+      \strng{authorbibnamehash}{eb402fa215742fc348e3ea8b324211a0}
+      \strng{authornamehash}{eb402fa215742fc348e3ea8b324211a0}
+      \strng{authorfullhash}{eb402fa215742fc348e3ea8b324211a0}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{What is the Grid? A Three Point Checklist}}
+      \field{year}{2002}
+    \endentry
+    \entry{33}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=e834a7ef05c081797baf4528c7923dea}{%
+           family={{Ian Foster, C. Kesselman, S. Tuecke}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{e834a7ef05c081797baf4528c7923dea}
+      \strng{fullhash}{e834a7ef05c081797baf4528c7923dea}
+      \strng{bibnamehash}{e834a7ef05c081797baf4528c7923dea}
+      \strng{authorbibnamehash}{e834a7ef05c081797baf4528c7923dea}
+      \strng{authornamehash}{e834a7ef05c081797baf4528c7923dea}
+      \strng{authorfullhash}{e834a7ef05c081797baf4528c7923dea}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{International J. Supercomputer Applications}}
+      \field{number}{3}
+      \field{title}{The Anatomy of the Grid: Enabling Scalable Virtual Organizations}
+      \field{volume}{15}
+      \field{year}{2001}
+    \endentry
+    \entry{38}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=86975b61a5833e511838c880dc9d9551}{%
+           family={{J. Rabaey}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{86975b61a5833e511838c880dc9d9551}
+      \strng{fullhash}{86975b61a5833e511838c880dc9d9551}
+      \strng{bibnamehash}{86975b61a5833e511838c880dc9d9551}
+      \strng{authorbibnamehash}{86975b61a5833e511838c880dc9d9551}
+      \strng{authornamehash}{86975b61a5833e511838c880dc9d9551}
+      \strng{authorfullhash}{86975b61a5833e511838c880dc9d9551}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{IEEE Consumer Communications \& Networking Conference (CCNC 2005)}}
+      \field{title}{Wireless Sensor and Consumer Multimedia Networks – A Story of Converging Trajectories?}
+      \field{year}{2005}
+    \endentry
+    \entry{88}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=347d4527b4a5fa7f46174992bddcfddb}{%
+           family={{V. Ancusa, R. Bogdan, M. Vladutiu}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Croatia}%
+      }
+      \strng{namehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{fullhash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{bibnamehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{authorbibnamehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{authornamehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{authorfullhash}{347d4527b4a5fa7f46174992bddcfddb}
+      \field{extraname}{1}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Proceedings of the 12th International Conference on Knowledge-Based Intelligent Information and Engineering Systems (KES08)}}
+      \field{title}{Discussing Redundancy Issues in Intelligent Agent-Based Non-traditional Grids}
+      \field{volume}{LNAI 5178}
+      \field{year}{2008}
+      \field{pages}{{297\bibrangedash 395}}
+      \range{pages}{-1}
+    \endentry
+    \entry{89}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=347d4527b4a5fa7f46174992bddcfddb}{%
+           family={{V. Ancusa, R. Bogdan, M. Vladutiu}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Florida, USA}%
+      }
+      \strng{namehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{fullhash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{bibnamehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{authorbibnamehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{authornamehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{authorfullhash}{347d4527b4a5fa7f46174992bddcfddb}
+      \field{extraname}{2}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Proceedings of the International Multi-Conference on Engineering and Technological Innovation}}
+      \field{isbn}{978-1-934272-46-6}
+      \field{title}{Discussing the Intelligent Agent Approach in Non-traditional Grids}
+      \field{volume}{I}
+      \field{year}{2008}
+      \field{pages}{{87\bibrangedash 92}}
+      \range{pages}{-1}
+    \endentry
+    \entry{107}{book}{}
+      \name{author}{1}{}{%
+        {{hash=0786a4c03c626bf95521c910fe1c6eb1}{%
+           family={{V. Ancusa}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Politehnica University of Timisoara}%
+      }
+      \strng{namehash}{0786a4c03c626bf95521c910fe1c6eb1}
+      \strng{fullhash}{0786a4c03c626bf95521c910fe1c6eb1}
+      \strng{bibnamehash}{0786a4c03c626bf95521c910fe1c6eb1}
+      \strng{authorbibnamehash}{0786a4c03c626bf95521c910fe1c6eb1}
+      \strng{authornamehash}{0786a4c03c626bf95521c910fe1c6eb1}
+      \strng{authorfullhash}{0786a4c03c626bf95521c910fe1c6eb1}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{PhD Thesis}
+      \field{title}{{Problema consensului in calcul tolerant la erori}}
+      \field{year}{2009}
+    \endentry
+    \entry{70}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=897d76c1d0eb78821aebcc76e0358517}{%
+           family={{R. Swanson}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \strng{namehash}{897d76c1d0eb78821aebcc76e0358517}
+      \strng{fullhash}{897d76c1d0eb78821aebcc76e0358517}
+      \strng{bibnamehash}{897d76c1d0eb78821aebcc76e0358517}
+      \strng{authorbibnamehash}{897d76c1d0eb78821aebcc76e0358517}
+      \strng{authornamehash}{897d76c1d0eb78821aebcc76e0358517}
+      \strng{authorfullhash}{897d76c1d0eb78821aebcc76e0358517}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{International Electron Devices Meeting (IEDM 2007)}}
+      \field{title}{Future Developments in Silicon Solar Cells}
+      \field{year}{2007}
+      \field{pages}{{359\bibrangedash 362}}
+      \range{pages}{-1}
+    \endentry
+    \entry{71}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=00a6740f7caaf0dbdbe04aefc634cd5e}{%
+           family={{R.Venkatasubramanian, Cynthia Watkins, David Stokes, John Posthill and Chris Caylor}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \strng{namehash}{00a6740f7caaf0dbdbe04aefc634cd5e}
+      \strng{fullhash}{00a6740f7caaf0dbdbe04aefc634cd5e}
+      \strng{bibnamehash}{00a6740f7caaf0dbdbe04aefc634cd5e}
+      \strng{authorbibnamehash}{00a6740f7caaf0dbdbe04aefc634cd5e}
+      \strng{authornamehash}{00a6740f7caaf0dbdbe04aefc634cd5e}
+      \strng{authorfullhash}{00a6740f7caaf0dbdbe04aefc634cd5e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{International Electron Devices Meeting (IEDM 2007)}}
+      \field{title}{Energy Harvesting for Electronics with Thermoelectric Devices using Nanoscale Materials}
+      \field{year}{2007}
+      \field{pages}{{367\bibrangedash 370}}
+      \range{pages}{-1}
+    \endentry
+    \entry{94}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=689537c4eaaac301dfbb325cec2405fb}{%
+           family={{W. Weber, C. Braun, J. Dienstuhl, R. Glaser, Y. Gsottberger, B. Knoll, C. Lauterbach, D. Leitner, M. X. Shi, M. Schnell, D. Savio, G. Stromberg and M. Verbeck}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{689537c4eaaac301dfbb325cec2405fb}
+      \strng{fullhash}{689537c4eaaac301dfbb325cec2405fb}
+      \strng{bibnamehash}{689537c4eaaac301dfbb325cec2405fb}
+      \strng{authorbibnamehash}{689537c4eaaac301dfbb325cec2405fb}
+      \strng{authornamehash}{689537c4eaaac301dfbb325cec2405fb}
+      \strng{authorfullhash}{689537c4eaaac301dfbb325cec2405fb}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{IEEE International Symposium on VLSI Technology (VLSI-TSA-Tech)}}
+      \field{title}{Disappearing electronics and the return of the physical world}
+      \field{year}{2005}
+      \field{pages}{{45\bibrangedash 48}}
+      \range{pages}{-1}
+    \endentry
+    \entry{23}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=610b3c0cc715eb0121826d1d009d0217}{%
+           family={{Eric M. Yeatman, Paul D. Mitcheson, Andrew S. Holmes}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \strng{namehash}{610b3c0cc715eb0121826d1d009d0217}
+      \strng{fullhash}{610b3c0cc715eb0121826d1d009d0217}
+      \strng{bibnamehash}{610b3c0cc715eb0121826d1d009d0217}
+      \strng{authorbibnamehash}{610b3c0cc715eb0121826d1d009d0217}
+      \strng{authornamehash}{610b3c0cc715eb0121826d1d009d0217}
+      \strng{authorfullhash}{610b3c0cc715eb0121826d1d009d0217}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{International Electron Devices Meeting (IEDM 2007)}}
+      \field{title}{Micro-Engineered Devices for Motion Energy Harvesting}
+      \field{year}{2007}
+      \field{pages}{{375\bibrangedash 378}}
+      \range{pages}{-1}
+    \endentry
+    \entry{72}{book}{}
+      \name{author}{1}{}{%
+        {{hash=13552a14f4669118412d46d3f86690d4}{%
+           family={{Rodica Tirtea}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Katholieke Universiteit Leuven}%
+      }
+      \strng{namehash}{13552a14f4669118412d46d3f86690d4}
+      \strng{fullhash}{13552a14f4669118412d46d3f86690d4}
+      \strng{bibnamehash}{13552a14f4669118412d46d3f86690d4}
+      \strng{authorbibnamehash}{13552a14f4669118412d46d3f86690d4}
+      \strng{authornamehash}{13552a14f4669118412d46d3f86690d4}
+      \strng{authorfullhash}{13552a14f4669118412d46d3f86690d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{PhD Thesis}
+      \field{title}{{Integration at middleware level of fault tolerance for distributed systems}}
+      \field{year}{2005}
+    \endentry
+    \entry{90}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=347d4527b4a5fa7f46174992bddcfddb}{%
+           family={{V. Ancusa, R. Bogdan, M. Vladutiu}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {South Korea}%
+      }
+      \strng{namehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{fullhash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{bibnamehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{authorbibnamehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{authornamehash}{347d4527b4a5fa7f46174992bddcfddb}
+      \strng{authorfullhash}{347d4527b4a5fa7f46174992bddcfddb}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{{Proceedings of the 4th International Conference on Networked Computing and Advanced Information Management (NCM08)}}
+      \field{isbn}{978-0-7695-3322-3}
+      \field{title}{Redundancy at Link Level for Non-Traditional Grids Implemented with Intelligent Agents}
+      \field{volume}{1}
+      \field{year}{2008}
+      \field{pages}{{597\bibrangedash 603}}
+      \range{pages}{-1}
+    \endentry
+    \entry{24}{book}{}
+      \name{author}{1}{}{%
+        {{hash=12a68947744a14c0e848f80bf785a557}{%
+           family={{Fabio Bellifemine, Giovanni Caire, Dominic Greenwood}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{12a68947744a14c0e848f80bf785a557}
+      \strng{fullhash}{12a68947744a14c0e848f80bf785a557}
+      \strng{bibnamehash}{12a68947744a14c0e848f80bf785a557}
+      \strng{authorbibnamehash}{12a68947744a14c0e848f80bf785a557}
+      \strng{authornamehash}{12a68947744a14c0e848f80bf785a557}
+      \strng{authorfullhash}{12a68947744a14c0e848f80bf785a557}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-470-05747-6 (HB)}
+      \field{title}{{Developing multi-agent systems with JADE}}
+      \field{year}{2007}
+    \endentry
+    \entry{105}{online}{}
+      \name{author}{1}{}{%
+        {{hash=30466b8c834027c2ed30b8483c9a0c3f}{%
+           family={{M. N. Huhns, L. M. Stephens}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{30466b8c834027c2ed30b8483c9a0c3f}
+      \strng{fullhash}{30466b8c834027c2ed30b8483c9a0c3f}
+      \strng{bibnamehash}{30466b8c834027c2ed30b8483c9a0c3f}
+      \strng{authorbibnamehash}{30466b8c834027c2ed30b8483c9a0c3f}
+      \strng{authornamehash}{30466b8c834027c2ed30b8483c9a0c3f}
+      \strng{authorfullhash}{30466b8c834027c2ed30b8483c9a0c3f}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Multiagent Systems and Societies of Agents}}
+      \field{year}{1999}
+      \verb{urlraw}
+      \verb http://citeseerx.ist.psu.edu/
+      \endverb
+      \verb{url}
+      \verb http://citeseerx.ist.psu.edu/
+      \endverb
+    \endentry
+    \entry{4}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=ac59955c523de83af50a62b219a12b86}{%
+           family={{Alexandru Coman, Mario A. Nascimento and Jorg Sandera}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bremen, Germany}%
+      }
+      \strng{namehash}{ac59955c523de83af50a62b219a12b86}
+      \strng{fullhash}{ac59955c523de83af50a62b219a12b86}
+      \strng{bibnamehash}{ac59955c523de83af50a62b219a12b86}
+      \strng{authorbibnamehash}{ac59955c523de83af50a62b219a12b86}
+      \strng{authornamehash}{ac59955c523de83af50a62b219a12b86}
+      \strng{authorfullhash}{ac59955c523de83af50a62b219a12b86}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{ACM Proceedings of the Conference on Information and Knowledge Management}
+      \field{title}{Exploiting Redundancy in Sensor Networks for Energy Efficient Processing of Spatiotemporal Region Queries}
+      \field{year}{2005}
+    \endentry
+    \entry{46}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5e6ecc0b29b5e3c2c5f047de3de5db1f}{%
+           family={Leslie\bibnamedelima Lamport},
+           familyi={L\bibinitperiod\bibinitdelim L\bibinitperiod},
+           given={Marshall\bibnamedelima Pease},
+           giveni={M\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=88bd932c15c4ae7b0f7652a409325659}{%
+           family={Shostak},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e930cbe0d712691115bda5dc520c0f72}
+      \strng{fullhash}{e930cbe0d712691115bda5dc520c0f72}
+      \strng{bibnamehash}{e930cbe0d712691115bda5dc520c0f72}
+      \strng{authorbibnamehash}{e930cbe0d712691115bda5dc520c0f72}
+      \strng{authornamehash}{e930cbe0d712691115bda5dc520c0f72}
+      \strng{authorfullhash}{e930cbe0d712691115bda5dc520c0f72}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Association for Computing Machinery}
+      \field{title}{Reaching Agreement in the Presence of Faults}
+      \field{year}{1980}
+    \endentry
+    \entry{106}{article}{}
+      \name{author}{1}{}{%
+        {{hash=bc8d425b8531c4c7bdec7e7f17487463}{%
+           family={R.\bibnamedelimi Guerraoui},
+           familyi={R\bibinitperiod\bibinitdelim G\bibinitperiod},
+           given={A.\bibnamedelimi Schiper},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{bc8d425b8531c4c7bdec7e7f17487463}
+      \strng{fullhash}{bc8d425b8531c4c7bdec7e7f17487463}
+      \strng{bibnamehash}{bc8d425b8531c4c7bdec7e7f17487463}
+      \strng{authorbibnamehash}{bc8d425b8531c4c7bdec7e7f17487463}
+      \strng{authornamehash}{bc8d425b8531c4c7bdec7e7f17487463}
+      \strng{authorfullhash}{bc8d425b8531c4c7bdec7e7f17487463}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Software Engineering}
+      \field{number}{1}
+      \field{title}{The Generic Consensus Service}
+      \field{volume}{27}
+      \field{year}{2001}
+    \endentry
+  \enddatalist
+  \missing{13}
+\endrefsection
+\endinput
+

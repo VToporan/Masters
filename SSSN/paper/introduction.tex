@@ -1,0 +1,13 @@
+\section{Introduction}
+
+Image capture based on active-pixel sensor (APS) supports a significantly lower dynamic range (DR), between \(55dB\) and \(80dB\),
+compared to human perception, at around \(90dB\), with real-world scenes able to surpass \(180dB\). For this
+reason, several methods for increasing DR have been researched in the past decades, including sampling multiple 
+frames at different exposures \cite{withSampling}, modifying the integration time on the fly \cite{withTime}, and
+switching between linear and logarithmic response to the charge build-up \cite{withTable, withScience, withCompensation}.
+
+This paper presents an architecture based on the linear-logarithmic pixel based on charge compensation \cite{withCompensation},
+as it induces the least amount of overhead. It also makes use of the independently self-actuated design choices
+of the variable integration time \cite{withTime}, in order to generate a specific dynamic range for each individual
+pixel.
+

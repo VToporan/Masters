@@ -1,0 +1,34 @@
+COURSE:
+Emergence is used in systems based on reactive agents
+External observers are required in order to determine weather a system is emergent
+It requires interactions between entities and the environment
+Interactions can be sequential (ant following) as well as parallel (bird flocking)
+Emergent systems are not reliable for critical tasks
+
+Deliberative systems require planning, considering the environment as a collection of states
+Through mathematical means, the systems determines the most desirable state
+SPA Architecture - Sensing + Planning + Acting - have serious drawbacks:
+    - Long time to determine each choice of state (can be resolved through state hierarchy)
+    - Amount of states is constrained by storage space
+    - Requires planning
+Trend is to move away from SPA towards more reactive systems
+For hybrid systems, the decision is split into reactive or deliberative, based on the momentary requirement
+Middle-ware balances the two systems based on their advantages
+
+Universal plans - AI that can work in any environment
+
+LAB:
+Source next to Sink
+
+Task1:
+GoTo - Pedestrian goes from Source to GoTo and return to Sink
+
+Task2:
+GoTo on top and GoTo on bottom
+PedSelect to determine the GoTo chosen by a Pedestrian
+Pedestrian needs to return along the same route
+PedSelect to chose the return trip based on Pedestrian initial choice
+Idea: Extend Pedestrian to store GoTo value
+      Use Pedestrian color to store GoTo
+
+

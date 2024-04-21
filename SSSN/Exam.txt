@@ -1,0 +1,13 @@
+01. Technical challenges for WSNs - 1:14
+02. Application areas for WSNs - 1:25
+03. Architectures of SNs - 2:21
+04. Time synchronization problem in WSNs: influencing factors, specific additional constraints, need - 3:2
+05. Physical layer and transceiver design considerations in WSNs - 4:14
+06. MAC protocols for WSNs - 4:23
+07. Localization and positioning approaches in WSNs - 5:5
+08. Coverage in WSNs - 6:2
+09. Design issues and challenges in WSN routing - 7:2
+10. Energy consumption of sensor nodes - 10:8
+11. Energy efficient MAC protocols - 11:16
+12. Solutions for energy replenishment at node level - 12:21
+

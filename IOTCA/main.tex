@@ -1,0 +1,23 @@
+\documentclass[12pt, english, a4paper]{report}
+\input{packages}
+\graphicspath{{resources/}}
+
+\begin{document}
+\let\oldref\ref
+\renewcommand{\ref}[1]{(\oldref{#1})}
+\renewcommand\bibname{References}
+\tikzstyle{every node}=[draw=black,thick,anchor=west]
+\counterwithin{lstlisting}{section}
+\counterwithin{figure}{section}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+\input{introduction}
+\input{intelligentGrid}
+
+\printbibliography
+\addcontentsline{toc}{chapter}{References}
+
+\end{document}
+

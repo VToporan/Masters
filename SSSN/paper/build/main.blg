@@ -1,0 +1,15 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is './build/main.blg'
+[65] biber:340> INFO - === Sun Jan 28, 2024, 23:54:01
+[79] Biber.pm:418> INFO - Reading './build/main.bcf'
+[138] Biber.pm:972> INFO - Found 5 citekeys in bib section 0
+[150] Biber.pm:4383> INFO - Processing section 0
+[159] Biber.pm:4574> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[161] bibtex.pm:1713> INFO - LaTeX decoding ...
+[175] bibtex.pm:1518> INFO - Found BibTeX data source 'bibliography.bib'
+[234] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[234] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[235] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[235] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[239] bbl.pm:654> INFO - Writing './build/main.bbl' with encoding 'UTF-8'
+[242] bbl.pm:757> INFO - Output to ./build/main.bbl

@@ -1,0 +1,56 @@
+COURSE:
+Collective behavior - best extracted when people are engaged in social interactions (usually bed ones)
+Kinds:
+    - crowd - group of individuals, close enough to interact
+    - mob - emotionally aroused crowd, with intent for violence
+    - riot - large scale mob
+
+Differences:
+    - crowd - information is not prioritized
+    - mob - information is enforced
+
+Panic:
+    - collective but irrational reaction to a serious threat
+    - happens in the moments immediate to the event
+
+Rumors:
+    - unverified information, communicated from one person to the next
+    - allows for not broadcasting a message to the entire collective
+    - messenger - sends along every message that is received
+    - interpreter - sends along only some of the information received
+
+Urban legends:
+    - information that is persistent in the crowd
+    - can be pre-programmed
+    - allows for choosing what information is passed to the entire collective
+
+Mass hysteria:
+    - widespread anxiety, lower level than panic
+
+Fads:
+    - short-lasting
+    - information is temporary
+
+Fashion:
+    - mid-lasting
+    - information is persistent
+
+Public opinion:
+    - long-lasting
+    - substantial amount of people with a different opinion, but with shared interest
+    - relates to how the information is stored
+
+Propaganda:
+    - information presented in order to change public opinion
+    - enforced by external factors
+    - changes the crowd behavior
+
+LAB:
+Insert into the app 2 global variables:
+    - one that counts how many Peds went up and how many went down
+
+Modify the first PedSelect:
+    - if (up == down) 50/50
+    - if (up > down) up
+    - if (up < down) down
+

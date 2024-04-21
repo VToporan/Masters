@@ -1,0 +1,12 @@
+a. Part* one: a presentation containing definitions, characteristics, state of the art, research directions, open problems, main 
+implementations; all should be connected to the project you have chosen; for example if you have chosen “Routing protocols in WSN”, 
+then part one should refer to routing protocols in WSNs and not in general to WSNs;
+
+b. Part two: a detailed description of a scientific paper which was published in a specialty scientific journal or in the 
+proceedings of a specialty conference; the source of the paper must be mentioned in References and CANNOT be a general purpose 
+journal (even from the IT field);
+
+c. Part three: an original idea/approach/application, presented as a scientific paper in IEEE format; I suggest a connection to 
+the previously described paper but it is only a suggestion;
+
+d. Part four: References: books, scientific journals, proceedings of specialty conferences, links (NOT only links).

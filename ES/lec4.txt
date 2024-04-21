@@ -1,0 +1,5 @@
+LAB:
+Ophthalmology department tutorial
+Using the same principle, simulate ants getting food
+Doctors are ants, at regular interval food (patients) shows up
+The ant picks up the food and takes it to the hub

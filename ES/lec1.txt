@@ -1,0 +1,23 @@
+COURSE:
+Emergence arises from interactions between entities
+Emegent behaviour => displayed only in collectives, has a minimum and maximum number of entities that generate it
+The entity that is part of the emergent behavior must be "very stupid" (act irrationally)
+
+Color and friction - not observable at microscopic level, derive from the interaction between atoms
+
+Stock market - resulting from the interaction of individuals within a discrete set of rules
+
+SPRAY computers => microscopic computers that can be sprayed on a wall and used as a display
+                   each robot has a laser, and acts as an individual pixel
+
+Ants => communicate through pheromones (1-2 molecules / ant), that degrade over time
+        they follow the same path towards the food and back
+        if something blocks the track, more ants pass around it through the shortest path, marking it with more pheromones
+
+Reactive behavior is faster than pre-programmed behaviour (spinal reflex vs brain processing) 
+Partly pre-programmed and partly reactive is the best solution
+
+LAB: 
+AnyLogic => 3/4 projects, each over 3 weeks
+For S3 => complete pedestrian library tutorial
+
