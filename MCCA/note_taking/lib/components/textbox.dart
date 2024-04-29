@@ -3,10 +3,26 @@ import 'package:flutter/widgets.dart';
 import 'package:note_taking/theme.dart';
 
 class TextBox extends StatefulWidget {
-  const TextBox({super.key});
+  const TextBox({
+    super.key,
+    required this.textController,
+    required this.textFocus,
+  });
+
+  final TextEditingController textController;
+  final FocusNode textFocus;
 
   @override
   State<TextBox> createState() => _TextBoxState();
+
+  void save() {
+    print(textController.text);
+  }
+
+  void focus() {
+    print("focus");
+    textFocus.requestFocus();
+  }
 }
 
 class _TextBoxState extends State<TextBox> {
@@ -20,11 +36,14 @@ class _TextBoxState extends State<TextBox> {
     return SizedBox(
       width: MediaQuery.sizeOf(context).width,
       height: MediaQuery.sizeOf(context).height,
-      child: const Padding(
-        padding: EdgeInsets.all(20),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
         child: TextField(
           maxLines: null,
           decoration: null,
+          cursorColor: ThemeColors.gruvDark,
+          controller: widget.textController,
+          focusNode: widget.textFocus,
         ),
       ),
     );

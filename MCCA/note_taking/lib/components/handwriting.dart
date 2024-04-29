@@ -4,10 +4,12 @@ import 'package:finger_painter/finger_painter.dart';
 
 import 'dart:ui' as ui;
 
-import 'theme.dart';
+import '../theme.dart';
 
 class HandWriting extends StatefulWidget {
-  const HandWriting({super.key});
+  HandWriting({super.key});
+
+  final PainterController painterController = PainterController();
 
   @override
   State<HandWriting> createState() => _HandWritingState();
@@ -15,34 +17,32 @@ class HandWriting extends StatefulWidget {
 
 class _HandWritingState extends State<HandWriting> {
   Image? image;
-  late PainterController painterController;
 
   @override
   void initState() {
-    super.initState();
-    painterController = PainterController()
+    widget.painterController
       ..setStrokeColor(ThemeColors.gruvDark)
       ..setMinStrokeWidth(3)
       ..setMaxStrokeWidth(3)
       ..setBlurSigma(0.0)
       ..setPenType(PenType.pencil)
       ..setBlendMode(ui.BlendMode.srcOver);
+    super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Painter(
-          controller: painterController,
-          backgroundColor: Colors.transparent,
-          onDrawingEnded: (bytes) async {
-            setState(() {});
-          },
-          size: Size(MediaQuery.of(context).size.width,
-              MediaQuery.of(context).size.height),
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.all(1),
+      child: Painter(
+        controller: widget.painterController,
+        backgroundColor: Colors.transparent,
+        onDrawingEnded: (bytes) async {
+          setState(() {});
+        },
+        size: Size(MediaQuery.of(context).size.width,
+            MediaQuery.of(context).size.height),
+      ),
     );
   }
 }
@@ -52,10 +52,10 @@ class HandWritingControls extends StatefulWidget {
   final Uint8List? imgBytesList;
 
   const HandWritingControls({
-    Key? key,
+    super.key,
     this.pc,
     this.imgBytesList,
-  }) : super(key: key);
+  });
 
   @override
   State<HandWritingControls> createState() => _ControlsState();
