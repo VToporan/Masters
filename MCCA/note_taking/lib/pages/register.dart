@@ -5,14 +5,14 @@ import 'package:note_taking/components/handwriting.dart';
 import 'package:note_taking/components/pageMenu.dart';
 import 'package:note_taking/components/textbox.dart';
 
-class Notes extends StatefulWidget {
-  const Notes({super.key});
+class Register extends StatefulWidget {
+  const Register({super.key});
 
   @override
-  State<Notes> createState() => _NotesState();
+  State<Register> createState() => _RegisterState();
 }
 
-class _NotesState extends State<Notes> {
+class _RegisterState extends State<Register> {
   late TextBox inputBox;
   late HandWriting writingBox;
 

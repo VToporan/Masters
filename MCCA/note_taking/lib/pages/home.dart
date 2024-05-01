@@ -1,27 +1,27 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:note_taking/components/handwriting.dart';
-import 'package:note_taking/components/mainMenu.dart';
-import 'package:note_taking/components/pageMenu.dart';
-import 'package:note_taking/components/textbox.dart';
+import 'package:note_taking/components/homeMenu.dart';
 import 'package:note_taking/pages/calendar.dart';
+import 'package:note_taking/pages/login.dart';
 import 'package:note_taking/pages/notes.dart';
 import 'package:note_taking/theme.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   final Notes notesPage = const Notes();
   final Calendar calendarPage = const Calendar();
+  final Login loginPage = const Login();
 
   @override
-  State<MainPage> createState() => _MainPageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _HomePageState extends State<HomePage> {
   late Widget currentPage;
 
-  late final pageMenu = MainMenu(menuFunctions: [
+  late final pageMenu = HomeMenu(menuFunctions: [
     () {
       setState(() {
         currentPage = widget.calendarPage;
@@ -32,18 +32,28 @@ class _MainPageState extends State<MainPage> {
         currentPage = widget.notesPage;
       });
     },
+    () {
+      setState(() {
+        currentPage = widget.loginPage;
+      });
+    },
   ]);
 
   @override
   void initState() {
     super.initState();
-    currentPage = widget.calendarPage;
+    currentPage = widget.loginPage;
   }
 
   @override
   Widget build(BuildContext context) {
     return Stack(
-      children: [
+      children: <Widget>[
+        Container(
+          width: double.infinity,
+          height: double.infinity,
+          color: ThemeColors.gruvLight,
+        ),
         currentPage,
         pageMenu,
       ],

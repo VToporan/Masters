@@ -16,11 +16,10 @@ class TextBox extends StatefulWidget {
   State<TextBox> createState() => _TextBoxState();
 
   void save() {
-    print(textController.text);
+    debugPrint(textController.text);
   }
 
   void focus() {
-    print("focus");
     textFocus.requestFocus();
   }
 }

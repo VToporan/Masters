@@ -1,22 +1,17 @@
-import 'dart:math';
-
 import 'package:circular_menu/circular_menu.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:note_taking/components/handwriting.dart';
-import 'package:note_taking/components/textbox.dart';
 import 'package:note_taking/theme.dart';
 
-class MainMenu extends StatefulWidget {
-  const MainMenu({super.key, required this.menuFunctions});
+class HomeMenu extends StatefulWidget {
+  const HomeMenu({super.key, required this.menuFunctions});
 
   final List<VoidCallback> menuFunctions;
 
   @override
-  State<MainMenu> createState() => _MainMenuState();
+  State<HomeMenu> createState() => _HomeMenuState();
 }
 
-class _MainMenuState extends State<MainMenu> {
+class _HomeMenuState extends State<HomeMenu> {
   @override
   void initState() {
     super.initState();
@@ -28,6 +23,7 @@ class _MainMenuState extends State<MainMenu> {
       ret.add(CircularMenuItem(
         iconColor: ThemeColors.gruvLight,
         color: ThemeColors.gruvDark,
+        boxShadow: const [],
         icon: Icons.person,
         onTap: func,
       ));
@@ -51,6 +47,7 @@ class _MainMenuState extends State<MainMenu> {
       toggleButtonMargin: 10.0,
       toggleButtonPadding: 10.0,
       toggleButtonSize: 30.0,
+      toggleButtonBoxShadow: const [],
       items: buildMenu(),
     );
   }

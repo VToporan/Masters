@@ -2,9 +2,6 @@ import 'dart:math';
 
 import 'package:circular_menu/circular_menu.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:note_taking/components/handwriting.dart';
-import 'package:note_taking/components/textbox.dart';
 import 'package:note_taking/theme.dart';
 
 class PageMenu extends StatefulWidget {
@@ -29,6 +26,7 @@ class _PageMenuState extends State<PageMenu> {
         iconColor: ThemeColors.gruvLight,
         color: ThemeColors.gruvDark,
         icon: Icons.person,
+        boxShadow: const [],
         onTap: func,
       ));
     }
@@ -38,7 +36,7 @@ class _PageMenuState extends State<PageMenu> {
   @override
   Widget build(BuildContext context) {
     return CircularMenu(
-      alignment: const Alignment(1.0, 0.3),
+      alignment: const Alignment(1.0, 0.5),
       radius: 80,
       curve: Curves.easeInOutSine,
       reverseCurve: Curves.easeInOutSine,
@@ -52,6 +50,7 @@ class _PageMenuState extends State<PageMenu> {
       // toggle button appearance properties
       toggleButtonColor: ThemeColors.gruvPink,
       toggleButtonIconColor: ThemeColors.gruvLight,
+      toggleButtonBoxShadow: const [],
       toggleButtonMargin: 10.0,
       toggleButtonPadding: 10.0,
       toggleButtonSize: 30.0,
