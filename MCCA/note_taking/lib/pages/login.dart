@@ -1,10 +1,9 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter/scheduler.dart';
-import 'package:note_taking/components/handwriting.dart';
-import 'package:note_taking/components/pageMenu.dart';
-import 'package:note_taking/components/textbox.dart';
+import 'package:note_taking/components/fancyButton.dart';
+import 'package:note_taking/components/inputField.dart';
+import 'package:note_taking/pages/home.dart';
 import 'package:note_taking/theme.dart';
 
 class Login extends StatefulWidget {
@@ -15,105 +14,80 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  late TextEditingController emailController;
+  late TextEditingController passwordController;
+  late String errorText;
+
   @override
   void initState() {
     super.initState();
+    emailController = TextEditingController();
+    passwordController = TextEditingController();
+    errorText = "";
   }
 
   @override
   Widget build(BuildContext context) {
+    double optimalWidth = MediaQuery.of(context).size.height / 3;
+    double optimalHeight = MediaQuery.of(context).size.height / 15;
     return Stack(
       children: [
-        Padding(
-          padding: EdgeInsets.only(
-            left: MediaQuery.of(context).size.width / 4,
-            right: MediaQuery.of(context).size.width / 4,
-          ),
+        Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height / 20,
-              ),
-              const TextField(
-                cursorColor: ThemeColors.gruvDark,
-                style: TextStyle(
-                  color: ThemeColors.gruvDark,
-                  fontSize: 14,
-                ),
-                decoration: InputDecoration(
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                      color: ThemeColors.gruvDark,
-                    ),
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  hoverColor: ThemeColors.gruvDark,
-                  focusColor: ThemeColors.gruvDark,
-                  fillColor: ThemeColors.gruvDark,
+              InputField(
+                textController: emailController,
+                textFocus: FocusNode(),
+                textHidden: false,
+                textLabel: "Email",
+                textSize: Size(
+                  optimalWidth,
+                  optimalHeight,
                 ),
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height / 30,
-              ),
-              const TextField(
-                cursorColor: ThemeColors.gruvDark,
-                style: TextStyle(
-                  color: ThemeColors.gruvDark,
-                  fontSize: 14,
-                ),
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  ),
-                  hoverColor: ThemeColors.gruvPink,
+              SizedBox(height: optimalHeight / 2),
+              InputField(
+                textController: passwordController,
+                textFocus: FocusNode(),
+                textHidden: true,
+                textLabel: "Password",
+                textSize: Size(
+                  optimalWidth,
+                  optimalHeight,
                 ),
               ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height / 30,
+              SizedBox(height: optimalHeight / 2),
+              Text(
+                errorText,
+                style:
+                    const TextStyle(color: ThemeColors.gruvRed, fontSize: 16),
               ),
-              ElevatedButton(
-                style: ButtonStyle(
-                  foregroundColor: const MaterialStatePropertyAll(
-                    ThemeColors.gruvDark,
-                  ),
-                  backgroundColor: const MaterialStatePropertyAll(
-                    Colors.transparent,
-                  ),
-                  shadowColor:
-                      const MaterialStatePropertyAll(Colors.transparent),
-                  surfaceTintColor:
-                      const MaterialStatePropertyAll(Colors.transparent),
-                  overlayColor:
-                      const MaterialStatePropertyAll(Colors.transparent),
-                  fixedSize: MaterialStatePropertyAll(
-                    Size(MediaQuery.of(context).size.width / 5,
-                        MediaQuery.of(context).size.height / 20),
-                  ),
-                  shape: const MaterialStatePropertyAll(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.all(
-                        Radius.circular(10),
-                      ),
-                      side: BorderSide(
-                        color: ThemeColors.gruvDark,
-                      ),
-                    ),
-                  ),
-                ),
-                onPressed: () {
-                  debugPrint("Login");
+              SizedBox(height: optimalHeight / 2),
+              FancyButton(
+                buttonSize: Size(optimalWidth, optimalHeight * (3 / 4)),
+                buttonText: "Login",
+                onPressed: () async {
+                  try {
+                    UserCredential userCredential = await FirebaseAuth.instance
+                        .signInWithEmailAndPassword(
+                            email: emailController.text,
+                            password: passwordController.text);
+                  } on FirebaseAuthException catch (e) {
+                    setState(() {
+                      errorText = e.toString();
+                    });
+                  }
                 },
-                child: const Text(
-                  "Login",
-                  style: TextStyle(
-                    color: ThemeColors.gruvDark,
-                    fontSize: 16,
-                  ),
-                ),
+              ),
+              SizedBox(height: optimalHeight / 4),
+              FancyButton(
+                buttonSize: Size(optimalWidth, optimalHeight * (3 / 5)),
+                buttonText: "Go to Register",
+                onPressed: () async {
+                  HomePage.of(context)?.gotoRegister();
+                },
               ),
             ],
           ),
