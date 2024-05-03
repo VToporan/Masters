@@ -30,17 +30,11 @@ class _FancyButtonState extends State<FancyButton> {
       height: widget.buttonSize.height,
       child: Padding(
         padding: const EdgeInsets.all(1),
-        child: ElevatedButton(
+        child: TextButton(
           style: const ButtonStyle(
             foregroundColor: MaterialStatePropertyAll(
               ThemeColors.gruvDark,
             ),
-            backgroundColor: MaterialStatePropertyAll(
-              Colors.transparent,
-            ),
-            shadowColor: MaterialStatePropertyAll(Colors.transparent),
-            surfaceTintColor: MaterialStatePropertyAll(Colors.transparent),
-            overlayColor: MaterialStatePropertyAll(Colors.transparent),
             shape: MaterialStatePropertyAll(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(

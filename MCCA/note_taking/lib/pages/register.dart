@@ -89,8 +89,7 @@ class _RegisterState extends State<Register> {
                     });
                   } else {
                     try {
-                      UserCredential userCredential = await FirebaseAuth
-                          .instance
+                      await FirebaseAuth.instance
                           .createUserWithEmailAndPassword(
                               email: emailController.text,
                               password: passwordController.text);

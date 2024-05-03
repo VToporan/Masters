@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
                   optimalHeight,
                 ),
               ),
-              SizedBox(height: optimalHeight / 2),
+              SizedBox(height: optimalHeight / 4),
               InputField(
                 textController: passwordController,
                 textFocus: FocusNode(),
@@ -58,22 +58,21 @@ class _LoginState extends State<Login> {
                   optimalHeight,
                 ),
               ),
-              SizedBox(height: optimalHeight / 2),
+              SizedBox(height: optimalHeight / 4),
               Text(
                 errorText,
                 style:
                     const TextStyle(color: ThemeColors.gruvRed, fontSize: 16),
               ),
-              SizedBox(height: optimalHeight / 2),
+              SizedBox(height: optimalHeight / 4),
               FancyButton(
                 buttonSize: Size(optimalWidth, optimalHeight * (3 / 4)),
                 buttonText: "Login",
                 onPressed: () async {
                   try {
-                    UserCredential userCredential = await FirebaseAuth.instance
-                        .signInWithEmailAndPassword(
-                            email: emailController.text,
-                            password: passwordController.text);
+                    await FirebaseAuth.instance.signInWithEmailAndPassword(
+                        email: emailController.text,
+                        password: passwordController.text);
                   } on FirebaseAuthException catch (e) {
                     setState(() {
                       errorText = e.toString();
