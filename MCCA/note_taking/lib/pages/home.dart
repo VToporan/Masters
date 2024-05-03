@@ -1,7 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:note_taking/components/homeMenu.dart';
 import 'package:note_taking/pages/account.dart';
 import 'package:note_taking/pages/calendar.dart';
@@ -33,11 +32,11 @@ class _HomePageState extends State<HomePage> {
   // FirebaseDatabase database = FirebaseDatabase.instance;
   // database.ref("users").set(FirebaseAuth.instance.currentUser?.uid) {
 
-  late final nav = HomeMenu(menuFunctions: [
-    gotoNotes,
-    gotoCalendar,
-    gotoAccount,
-  ]);
+  late final nav = HomeMenu(menuFunctions: {
+    gotoNotes: Icons.edit_note_rounded,
+    gotoCalendar: Icons.calendar_month_rounded,
+    gotoAccount: Icons.account_box_rounded,
+  });
 
   void gotoLogin() {
     setState(() {
@@ -53,13 +52,6 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void gotoAccount() {
-    setState(() {
-      currentPage = accountPage;
-      showNav = true;
-    });
-  }
-
   void gotoNotes() {
     setState(() {
       currentPage = notesPage;
@@ -70,6 +62,13 @@ class _HomePageState extends State<HomePage> {
   void gotoCalendar() {
     setState(() {
       currentPage = calendarPage;
+      showNav = true;
+    });
+  }
+
+  void gotoAccount() {
+    setState(() {
+      currentPage = accountPage;
       showNav = true;
     });
   }

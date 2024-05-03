@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:note_taking/theme.dart';
 import 'package:finger_painter/finger_painter.dart';
 
 import 'dart:ui' as ui;
-
-import '../theme.dart';
 
 class HandWriting extends StatefulWidget {
   HandWriting({super.key});
@@ -20,6 +19,7 @@ class _HandWritingState extends State<HandWriting> {
 
   @override
   void initState() {
+    super.initState();
     widget.painterController
       ..setStrokeColor(ThemeColors.gruvDark)
       ..setMinStrokeWidth(3)
@@ -27,7 +27,6 @@ class _HandWritingState extends State<HandWriting> {
       ..setBlurSigma(0.0)
       ..setPenType(PenType.pencil)
       ..setBlendMode(ui.BlendMode.srcOver);
-    super.initState();
   }
 
   @override

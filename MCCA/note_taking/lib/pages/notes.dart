@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:note_taking/components/handwriting.dart';
 import 'package:note_taking/components/pageMenu.dart';
@@ -19,16 +18,16 @@ class _NotesState extends State<Notes> {
   late Widget backWidget = inputBox;
   late Widget frontWidget = writingBox;
 
-  late final pageMenu = PageMenu(menuFunctions: [
+  late final pageMenu = PageMenu(menuFunctions: {
     () {
       inputBox.save();
-    },
+    }: Icons.save,
     () {
       setState(() {
         backWidget = inputBox;
         frontWidget = writingBox;
       });
-    },
+    }: Icons.edit,
     () {
       setState(() {
         backWidget = writingBox;
@@ -37,8 +36,8 @@ class _NotesState extends State<Notes> {
       SchedulerBinding.instance.addPostFrameCallback((_) {
         inputBox.focus();
       });
-    }
-  ]);
+    }: Icons.text_fields_rounded,
+  });
 
   @override
   void initState() {

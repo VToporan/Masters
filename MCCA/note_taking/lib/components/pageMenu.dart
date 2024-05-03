@@ -7,7 +7,7 @@ import 'package:note_taking/theme.dart';
 class PageMenu extends StatefulWidget {
   const PageMenu({super.key, required this.menuFunctions});
 
-  final List<VoidCallback> menuFunctions;
+  final Map<VoidCallback, IconData> menuFunctions;
 
   @override
   State<PageMenu> createState() => _PageMenuState();
@@ -21,15 +21,15 @@ class _PageMenuState extends State<PageMenu> {
 
   List<CircularMenuItem> buildMenu() {
     List<CircularMenuItem> ret = [];
-    for (VoidCallback func in widget.menuFunctions) {
+    widget.menuFunctions.forEach((func, icon) {
       ret.add(CircularMenuItem(
         iconColor: ThemeColors.gruvLight,
         color: ThemeColors.gruvDark,
-        icon: Icons.person,
         boxShadow: const [],
+        icon: icon,
         onTap: func,
       ));
-    }
+    });
     return ret;
   }
 
@@ -53,7 +53,7 @@ class _PageMenuState extends State<PageMenu> {
       toggleButtonBoxShadow: const [],
       toggleButtonMargin: 10.0,
       toggleButtonPadding: 10.0,
-      toggleButtonSize: 30.0,
+      toggleButtonSize: 40.0,
       items: buildMenu(),
     );
   }
