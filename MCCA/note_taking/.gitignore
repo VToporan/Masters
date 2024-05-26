@@ -31,6 +31,21 @@ migrate_working_dir/
 .pub/
 /build/
 
+analysis_options.yaml
+android/
+assets/
+firebase.json
+ios/
+lib/data/
+linux/
+macos/
+pubspec.lock
+pubspec.yaml
+test/
+web/
+windows/
+.metadata
+
 # Symbolication related
 app.*.symbols
 

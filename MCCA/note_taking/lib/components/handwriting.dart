@@ -8,19 +8,17 @@ import 'dart:ui' as ui;
 class HandWriting extends StatefulWidget {
   HandWriting({super.key});
 
-  final PainterController painterController = PainterController();
-
   @override
   State<HandWriting> createState() => _HandWritingState();
 }
 
 class _HandWritingState extends State<HandWriting> {
-  Image? image;
+  final PainterController painterController = PainterController();
 
   @override
   void initState() {
     super.initState();
-    widget.painterController
+    painterController
       ..setStrokeColor(ThemeColors.gruvDark)
       ..setMinStrokeWidth(3)
       ..setMaxStrokeWidth(3)
@@ -34,7 +32,7 @@ class _HandWritingState extends State<HandWriting> {
     return Padding(
       padding: const EdgeInsets.all(1),
       child: Painter(
-        controller: widget.painterController,
+        controller: painterController,
         backgroundColor: Colors.transparent,
         onDrawingEnded: (bytes) async {
           setState(() {});
