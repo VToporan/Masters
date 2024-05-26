@@ -1,0 +1,25 @@
+COURSE:
+
+Sate machines:
+ - 1D => state can be determined from inputs
+ - 2D => narrow applications (such as bacteria)
+
+Cellular automata:
+ - based on the chosen neighborhood and rules, emergence can be generated
+
+Bird flocking (boyd rules):
+  - cohesion: fly towards average od other flock-mates
+  - separation: avoid local flock-mates
+  - alignment: fly in the same direction as flock-mates
+
+Segregation:
+  - moore neighborhood
+  - white changes to black if there are X black cells around
+  - black changes to white if there are X white cells around
+  - complication: only specific white / black cells can turn
+
+ LAB:
+
+ Combo Ped + Proc
+ When food appears an ant appears (and goes to it based on the rules from Lab1)
+ After food is released, ant returns 

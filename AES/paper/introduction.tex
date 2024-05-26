@@ -1,0 +1,18 @@
+\section{Introduction}
+
+Stereovision systems are based on the triangulation of 3-dimensional points from their projection
+on the 2-dimensional planes of images captured by distinct cameras, taking inspiration from the 
+stereoptic mechanism of human vision. For such cases, the determining factor in most computations
+is the distance between the cameral, as it is directly linked to the maximum scene depth that can 
+be perceived without noise perturbations.~\cite{withGeneralDepth, withMain, withNavigation}
+
+In other cases however, the baseline case is that of insect stereopsis, with multiple instances of the
+same scene being recorded as fractions of the same underling image. In such cases, the systems makes
+use of a micro lens array in order to focus light into specific points of the image sensor, leading
+to a small distance between the focal points of each image, thus losing accuracy for points that are
+deeper into the scene.~\cite{withInsects}
+
+This paper presents a variation on the latter, opting however to use different sensing areas in order
+to record the image data. The setup is based on the hemispherically curved image sensor CurvIS, in
+order to add a 3-dimensional component to the sensor pattern. In the end, the sensing areas can be 
+combined into a larger sensor, depending on the resolution and accuracy needs of each application.

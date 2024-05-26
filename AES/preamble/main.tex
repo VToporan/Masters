@@ -1,0 +1,29 @@
+\documentclass[english, a4paper]{article}
+\input{packages}
+
+\title{Depth Perception Through the Use of Image Sensor Arrays} 
+\date{}
+\author{Victor TOPORAN}
+
+\begin{document}
+
+\let\oldref\ref
+\renewcommand{\ref}[1]{ (\oldref{#1}) }
+
+\tikzstyle{every node}=[draw=black,thick,anchor=west]
+\counterwithin{lstlisting}{section}
+\counterwithin{equation}{section}
+\counterwithin{figure}{section}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{8pt}
+
+\maketitle
+
+% \input{introduction}
+\input{stateOfTheArt}
+\input{paperDescription}
+
+\printbibliography
+
+\end{document}
