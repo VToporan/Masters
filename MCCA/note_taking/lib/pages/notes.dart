@@ -316,8 +316,8 @@ class _NotesState extends State<Notes> {
                                           String userID = FirebaseAuth
                                               .instance.currentUser!.uid;
                                           DatabaseReference ref =
-                                              FirebaseDatabase.instance
-                                                  .ref('users/$userID');
+                                              FirebaseDatabase.instance.ref(
+                                                  'users/$userID/calendar');
                                           ref
                                               .child(
                                                   "$dateFromated/$timeFromated")
