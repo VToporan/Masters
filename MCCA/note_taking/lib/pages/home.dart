@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
@@ -23,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   late Widget currentPage;
   late bool showNav;
 
-  late Notes notesPage = const Notes();
+  late Notes notesPage = Notes();
   late Calendar calendarPage = const Calendar();
   late Login loginPage = const Login();
   late Register registerPage = const Register();
@@ -35,6 +37,7 @@ class _HomePageState extends State<HomePage> {
   late final nav = HomeMenu(menuFunctions: {
     gotoNotes: Icons.edit_note_rounded,
     gotoCalendar: Icons.calendar_month_rounded,
+    gotoFiles: Icons.folder_copy,
     gotoAccount: Icons.account_box_rounded,
   });
 
@@ -52,11 +55,16 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  void gotoNotes() {
+  void gotoNotes() async {
     setState(() {
       currentPage = notesPage;
       showNav = true;
     });
+    String userID = FirebaseAuth.instance.currentUser!.uid;
+    DatabaseReference ref = FirebaseDatabase.instance.ref('users/$userID');
+    DataSnapshot data = await ref.child('latest').get();
+    var json = data.value as Map<Object?, Object?>;
+    notesPage.setValues(json['image'] as String, json['text'] as String);
   }
 
   void gotoCalendar() {
@@ -64,6 +72,10 @@ class _HomePageState extends State<HomePage> {
       currentPage = calendarPage;
       showNav = true;
     });
+  }
+
+  void gotoFiles() {
+    debugPrint("WIP");
   }
 
   void gotoAccount() {
@@ -79,10 +91,23 @@ class _HomePageState extends State<HomePage> {
     showNav = false;
     currentPage = loginPage;
 
-    FirebaseAuth.instance.authStateChanges().listen((User? user) {
+    FirebaseAuth.instance.authStateChanges().listen((User? user) async {
       if (user == null) {
+        print("not logged");
         gotoLogin();
       } else {
+        print("logged");
+        DatabaseReference ref = FirebaseDatabase.instance.ref('users');
+        final userSpace = await ref.child(user.uid).get();
+        if (!userSpace.exists) {
+          ref.child(user.uid).set({
+            "latest": {
+              "image": "",
+              "text": "",
+            },
+            "calendar": "",
+          });
+        }
         gotoNotes();
       }
     });

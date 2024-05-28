@@ -1,30 +1,52 @@
+import 'dart:convert';
+import 'dart:ui' as ui;
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:note_taking/theme.dart';
 import 'package:finger_painter/finger_painter.dart';
 
-import 'dart:ui' as ui;
-
 class HandWriting extends StatefulWidget {
   HandWriting({super.key});
+
+  final PainterController painterController = PainterController();
+
+  String save() {
+    return base64.encode(painterController.getImageBytes()!);
+  }
+
+  void focus() {
+    painterController.setMaxStrokeWidth(3);
+    painterController.setMinStrokeWidth(3);
+    painterController.setStrokeColor(ThemeColors.gruvDark);
+    painterController.setBlendMode(ui.BlendMode.srcOver);
+  }
+
+  void eraser() {
+    painterController.setMaxStrokeWidth(15);
+    painterController.setMinStrokeWidth(15);
+    painterController.setStrokeColor(ThemeColors.gruvLight);
+    painterController.setBlendMode(ui.BlendMode.dstOut);
+  }
+
+  void clear() {
+    painterController.clearContent(
+        clearColor: const ui.Color.fromARGB(1, 251, 241, 198));
+  }
+
+  void setImage(Uint8List image) {
+    if (image.isNotEmpty) painterController.setBackgroundImage(image);
+  }
 
   @override
   State<HandWriting> createState() => _HandWritingState();
 }
 
 class _HandWritingState extends State<HandWriting> {
-  final PainterController painterController = PainterController();
-
   @override
   void initState() {
     super.initState();
-    painterController
-      ..setStrokeColor(ThemeColors.gruvDark)
-      ..setMinStrokeWidth(3)
-      ..setMaxStrokeWidth(3)
-      ..setBlurSigma(0.0)
-      ..setPenType(PenType.pencil)
-      ..setBlendMode(ui.BlendMode.srcOver);
+    widget.focus();
   }
 
   @override
@@ -32,65 +54,14 @@ class _HandWritingState extends State<HandWriting> {
     return Padding(
       padding: const EdgeInsets.all(1),
       child: Painter(
-        controller: painterController,
-        backgroundColor: Colors.transparent,
+        controller: widget.painterController,
+        backgroundColor: const ui.Color.fromARGB(1, 251, 241, 198),
         onDrawingEnded: (bytes) async {
           setState(() {});
         },
         size: Size(MediaQuery.of(context).size.width,
             MediaQuery.of(context).size.height),
       ),
-    );
-  }
-}
-
-class HandWritingControls extends StatefulWidget {
-  final PainterController? pc;
-  final Uint8List? imgBytesList;
-
-  const HandWritingControls({
-    super.key,
-    this.pc,
-    this.imgBytesList,
-  });
-
-  @override
-  State<HandWritingControls> createState() => _ControlsState();
-}
-
-class _ControlsState extends State<HandWritingControls> {
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const SizedBox(height: 30),
-
-        // Colors, background & delete
-        Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            FloatingActionButton(
-              backgroundColor: ThemeColors.gruvDark,
-              onPressed: () => {
-                widget.pc?.setStrokeColor(ThemeColors.gruvDark),
-                widget.pc?.setBlendMode(ui.BlendMode.srcOver)
-              },
-            ),
-            FloatingActionButton(
-                backgroundColor: ThemeColors.gruvLight,
-                onPressed: () => {
-                      widget.pc?.setStrokeColor(ThemeColors.gruvLight),
-                      widget.pc?.setBlendMode(ui.BlendMode.dstOut)
-                    }),
-            FloatingActionButton(
-                backgroundColor: ThemeColors.gruvRed,
-                child: const Icon(Icons.delete_outline),
-                onPressed: () =>
-                    widget.pc?.clearContent(clearColor: ThemeColors.gruvLight)),
-          ],
-        ),
-      ],
     );
   }
 }

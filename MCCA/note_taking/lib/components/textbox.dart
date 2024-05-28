@@ -14,8 +14,16 @@ class TextBox extends StatefulWidget {
   @override
   State<TextBox> createState() => _TextBoxState();
 
-  void save() {
-    debugPrint(textController.text);
+  String save() {
+    return textController.text;
+  }
+
+  void setText(String text) {
+    textController.text = text;
+  }
+
+  void clear() {
+    setText("");
   }
 
   void focus() {

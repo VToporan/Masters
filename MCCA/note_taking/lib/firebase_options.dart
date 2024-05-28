@@ -56,6 +56,8 @@ class DefaultFirebaseOptions {
     projectId: 'notetaking-25382',
     authDomain: 'notetaking-25382.firebaseapp.com',
     storageBucket: 'notetaking-25382.appspot.com',
+    databaseURL:
+        'https://notetaking-25382-default-rtdb.europe-west1.firebasedatabase.app/',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
@@ -64,5 +66,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '562764359620',
     projectId: 'notetaking-25382',
     storageBucket: 'notetaking-25382.appspot.com',
+    databaseURL:
+        'https://notetaking-25382-default-rtdb.europe-west1.firebasedatabase.app/',
   );
 }

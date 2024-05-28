@@ -61,11 +61,23 @@ class _InputFieldState extends State<InputField> {
             ),
             focusedBorder: const OutlineInputBorder(
               borderSide: BorderSide(
+                width: 2,
+                color: ThemeColors.gruvDark,
+              ),
+              borderRadius: BorderRadius.all(Radius.circular(10)),
+            ),
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(
+                width: 2,
                 color: ThemeColors.gruvDark,
               ),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             border: const OutlineInputBorder(
+              borderSide: BorderSide(
+                width: 2,
+                color: ThemeColors.gruvDark,
+              ),
               borderRadius: BorderRadius.all(Radius.circular(10)),
             ),
             hoverColor: ThemeColors.gruvDark,

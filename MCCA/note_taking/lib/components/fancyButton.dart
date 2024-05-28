@@ -32,15 +32,16 @@ class _FancyButtonState extends State<FancyButton> {
         padding: const EdgeInsets.all(1),
         child: TextButton(
           style: const ButtonStyle(
-            foregroundColor: MaterialStatePropertyAll(
+            foregroundColor: WidgetStatePropertyAll(
               ThemeColors.gruvDark,
             ),
-            shape: MaterialStatePropertyAll(
+            shape: WidgetStatePropertyAll(
               RoundedRectangleBorder(
                 borderRadius: BorderRadius.all(
                   Radius.circular(10),
                 ),
                 side: BorderSide(
+                  width: 2,
                   color: ThemeColors.gruvDark,
                 ),
               ),
