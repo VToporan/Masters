@@ -52,7 +52,7 @@ class _NotesState extends State<Notes> {
                   ),
                   actions: <Widget>[
                     FancyButton(
-                      buttonSize: const Size(160, 40),
+                      buttonSize: const Size(140, 40),
                       buttonText: "Save for later",
                       onPressed: () {
                         String userID = FirebaseAuth.instance.currentUser!.uid;
@@ -66,10 +66,56 @@ class _NotesState extends State<Notes> {
                       },
                     ),
                     FancyButton(
-                      buttonSize: const Size(160, 40),
+                      buttonSize: const Size(140, 40),
                       buttonText: "Set reminder",
-                      onPressed: () {
+                      onPressed: () async {
                         Navigator.pop(context);
+                        DateTime date = await showDatePicker(
+                              context: context,
+                              firstDate: DateTime.utc(2010),
+                              lastDate: DateTime.utc(2025),
+                              builder: (BuildContext context, Widget? child) {
+                                return DatePickerTheme(
+                                  data: const DatePickerThemeData(
+                                    backgroundColor: ThemeColors.gruvLight,
+                                    dividerColor: ThemeColors.gruvDark,
+                                    headerForegroundColor: ThemeColors.gruvDark,
+                                    shadowColor: ThemeColors.gruvLight,
+                                    surfaceTintColor: Colors.transparent,
+                                    yearStyle: TextStyle(
+                                        color: ThemeColors.gruvDark,
+                                        fontSize: 14),
+                                    todayBorder:
+                                        BorderSide(color: ThemeColors.gruvDark),
+                                    dayStyle:
+                                        TextStyle(color: ThemeColors.gruvDark),
+                                    weekdayStyle:
+                                        TextStyle(color: ThemeColors.gruvDark),
+                                    headerHelpStyle: TextStyle(
+                                        color: ThemeColors.gruvDark,
+                                        fontSize: 16),
+                                    headerHeadlineStyle: TextStyle(
+                                        color: ThemeColors.gruvDark,
+                                        fontSize: 16),
+                                    cancelButtonStyle: ButtonStyle(
+                                        foregroundColor: WidgetStatePropertyAll(
+                                            ThemeColors.gruvDark)),
+                                    confirmButtonStyle: ButtonStyle(
+                                        foregroundColor: WidgetStatePropertyAll(
+                                            ThemeColors.gruvDark)),
+                                    shape: RoundedRectangleBorder(
+                                        side: BorderSide(
+                                            width: 3,
+                                            color: ThemeColors.gruvDark),
+                                        borderRadius: BorderRadius.all(
+                                            Radius.circular(10.0))),
+                                  ),
+                                  child: child ?? const SizedBox(),
+                                );
+                              },
+                            ) ??
+                            DateTime.now();
+                        debugPrint(date.toString());
                       },
                     ),
                   ],
