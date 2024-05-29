@@ -48,7 +48,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void gotoLogin() {
-    saveNoteValues();
     setState(() {
       currentPage = loginPage;
       showNav = false;
@@ -56,7 +55,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void gotoRegister() {
-    saveNoteValues();
     setState(() {
       currentPage = registerPage;
       showNav = false;
@@ -136,6 +134,7 @@ class _HomePageState extends State<HomePage> {
     FirebaseAuth.instance.authStateChanges().listen((User? user) async {
       if (user == null) {
         debugPrint("not logged");
+        requireLatest = true;
         gotoLogin();
       } else {
         debugPrint("logged");

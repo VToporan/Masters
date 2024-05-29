@@ -8,7 +8,6 @@ import 'package:note_taking/components/slidable.dart';
 import 'package:note_taking/pages/home.dart';
 import 'package:note_taking/theme.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:thumbnailer/thumbnailer.dart';
 
 class Event {
   Event(
@@ -75,70 +74,70 @@ class _CalendarState extends State<Calendar> {
       children: [
         Padding(
           padding: const EdgeInsets.all(40),
-          child: Column(
-            children: [
-              TableCalendar(
-                firstDay: DateTime.utc(2020),
-                lastDay: DateTime.utc(2045),
-                focusedDay: _focusedDay,
-                startingDayOfWeek: StartingDayOfWeek.monday,
-                weekNumbersVisible: true,
-                daysOfWeekStyle: const DaysOfWeekStyle(
-                  weekdayStyle: TextStyle(color: ThemeColors.gruvDark),
-                  weekendStyle: TextStyle(color: ThemeColors.gruvRed),
-                ),
-                headerStyle: const HeaderStyle(
-                  titleTextStyle: TextStyle(
-                    color: ThemeColors.gruvDark,
-                    fontSize: 20,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                TableCalendar(
+                  firstDay: DateTime.utc(2020),
+                  lastDay: DateTime.utc(2045),
+                  focusedDay: _focusedDay,
+                  startingDayOfWeek: StartingDayOfWeek.monday,
+                  weekNumbersVisible: true,
+                  daysOfWeekStyle: const DaysOfWeekStyle(
+                    weekdayStyle: TextStyle(color: ThemeColors.gruvDark),
+                    weekendStyle: TextStyle(color: ThemeColors.gruvRed),
                   ),
-                  formatButtonVisible: false,
-                ),
-                calendarStyle: const CalendarStyle(
-                  todayTextStyle: TextStyle(color: ThemeColors.gruvLight),
-                  weekendTextStyle: TextStyle(color: ThemeColors.gruvRed),
-                  outsideTextStyle: TextStyle(color: ThemeColors.gruvGray),
-                  weekNumberTextStyle: TextStyle(
-                    color: ThemeColors.gruvPink,
-                    fontSize: 12,
+                  headerStyle: const HeaderStyle(
+                    titleTextStyle: TextStyle(
+                      color: ThemeColors.gruvDark,
+                      fontSize: 20,
+                    ),
+                    formatButtonVisible: false,
                   ),
-                  defaultTextStyle: TextStyle(
-                    color: ThemeColors.gruvDark,
-                    fontSize: 16,
+                  calendarStyle: const CalendarStyle(
+                    todayTextStyle: TextStyle(color: ThemeColors.gruvLight),
+                    weekendTextStyle: TextStyle(color: ThemeColors.gruvRed),
+                    outsideTextStyle: TextStyle(color: ThemeColors.gruvGray),
+                    weekNumberTextStyle: TextStyle(
+                      color: ThemeColors.gruvPink,
+                      fontSize: 12,
+                    ),
+                    defaultTextStyle: TextStyle(
+                      color: ThemeColors.gruvDark,
+                      fontSize: 16,
+                    ),
+                    todayDecoration: BoxDecoration(
+                      color: ThemeColors.gruvYellow,
+                      shape: BoxShape.circle,
+                    ),
+                    selectedDecoration: BoxDecoration(
+                      color: ThemeColors.gruvPink,
+                      shape: BoxShape.circle,
+                    ),
                   ),
-                  todayDecoration: BoxDecoration(
-                    color: ThemeColors.gruvYellow,
-                    shape: BoxShape.circle,
-                  ),
-                  selectedDecoration: BoxDecoration(
-                    color: ThemeColors.gruvPink,
-                    shape: BoxShape.circle,
-                  ),
-                ),
-                selectedDayPredicate: (day) {
-                  return isSameDay(_selectedDay, day);
-                },
-                onDaySelected: (selectedDay, focusedDay) {
-                  setState(() {
-                    _selectedDay = selectedDay;
+                  selectedDayPredicate: (day) {
+                    return isSameDay(_selectedDay, day);
+                  },
+                  onDaySelected: (selectedDay, focusedDay) {
+                    setState(() {
+                      _selectedDay = selectedDay;
+                      _focusedDay = focusedDay;
+                    });
+                  },
+                  calendarFormat: _calendarFormat,
+                  onFormatChanged: (format) {
+                    setState(() {
+                      _calendarFormat = format;
+                    });
+                  },
+                  onPageChanged: (focusedDay) {
                     _focusedDay = focusedDay;
-                  });
-                },
-                calendarFormat: _calendarFormat,
-                onFormatChanged: (format) {
-                  setState(() {
-                    _calendarFormat = format;
-                  });
-                },
-                onPageChanged: (focusedDay) {
-                  _focusedDay = focusedDay;
-                },
-              ),
-              const SizedBox(
-                height: 10,
-              ),
-              SingleChildScrollView(
-                child: Column(
+                  },
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Column(
                   children: [
                     FutureBuilder(
                       future: _getEventsForDay(_selectedDay),
@@ -201,8 +200,8 @@ class _CalendarState extends State<Calendar> {
                     ),
                   ],
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ],
