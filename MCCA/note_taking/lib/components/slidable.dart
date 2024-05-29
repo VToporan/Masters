@@ -19,26 +19,30 @@ class SlidableComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Slidable(
-      key: key,
-      startActionPane: ActionPane(
-        motion: const BehindMotion(),
-        extentRatio: 0.25,
-        openThreshold: 0.15,
-        children: [
-          SlidableAction(
-            onPressed: onDelete,
-            backgroundColor: ThemeColors.gruvRed,
-            foregroundColor: ThemeColors.gruvLight,
-            icon: Icons.delete,
-            label: 'Delete',
-          ),
-        ],
-      ),
-      child: CardComponent(
-        title: cardTitle,
-        subTitle: cardSubtitle,
-        onTap: onTap,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 40),
+      child: Slidable(
+        key: key,
+        startActionPane: ActionPane(
+          motion: const BehindMotion(),
+          extentRatio: 0.10,
+          openThreshold: 0.05,
+          children: [
+            SlidableAction(
+              onPressed: onDelete,
+              borderRadius: const BorderRadius.all(Radius.circular(10)),
+              backgroundColor: ThemeColors.gruvRed,
+              foregroundColor: ThemeColors.gruvLight,
+              icon: Icons.delete,
+              label: 'Delete',
+            ),
+          ],
+        ),
+        child: CardComponent(
+          title: cardTitle,
+          subTitle: cardSubtitle,
+          onTap: onTap,
+        ),
       ),
     );
   }

@@ -1,9 +1,6 @@
-import 'dart:convert';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:intl/intl.dart';
 import 'package:note_taking/components/card.dart';
 import 'package:note_taking/components/pageMenu.dart';
@@ -41,6 +38,7 @@ class _CalendarState extends State<Calendar> {
   late DateTime _selectedDay;
   late DateTime _focusedDay;
   late CalendarFormat _calendarFormat;
+  late List<Event> events;
 
   @override
   void initState() {
@@ -144,34 +142,54 @@ class _CalendarState extends State<Calendar> {
                       future: _getEventsForDay(_selectedDay),
                       builder: (context, future) {
                         if (!future.hasData || future.data!.isEmpty) {
-                          return CardComponent(
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 40),
+                            child: CardComponent(
                               title: "No entries for this date",
                               subTitle: "",
-                              onTap: () {});
+                              onTap: () {},
+                            ),
+                          );
                         } else {
-                          List<Event> events = future.data!;
+                          events = future.data!;
                           return ListView.builder(
                               scrollDirection: Axis.vertical,
                               shrinkWrap: true,
                               itemCount: events.length,
                               itemBuilder: (context, index) {
+                                Event event = events[index];
                                 return SlidableComponent(
-                                    cardTitle: events[index].timeStamp,
-                                    cardSubtitle: events[index].text,
+                                    cardTitle: event.timeStamp,
+                                    cardSubtitle: event.text,
                                     onTap: () async {
                                       String date = DateFormat('yyyy-MM-dd')
                                           .format(_selectedDay);
-                                      String time = events[index].timeStamp;
+                                      String time = event.timeStamp;
                                       String accessPoint =
                                           'calendar/$date/$time';
                                       HomePage.of(context)
                                           ?.updateLatestAccess(accessPoint);
                                       HomePage.of(context)?.updateNotesValues(
-                                          events[index].image,
-                                          events[index].text);
+                                          event.image, event.text);
                                       HomePage.of(context)?.gotoNotes();
                                     },
-                                    onDelete: (context) {});
+                                    onDelete: (context) {
+                                      String date = DateFormat('yyyy-MM-dd')
+                                          .format(_selectedDay);
+                                      String time = event.timeStamp;
+                                      String accessPoint =
+                                          'calendar/$date/$time';
+
+                                      String userID = FirebaseAuth
+                                          .instance.currentUser!.uid;
+                                      DatabaseReference ref = FirebaseDatabase
+                                          .instance
+                                          .ref('users/$userID/$accessPoint');
+                                      ref.remove();
+                                      setState(() {
+                                        events.remove(event);
+                                      });
+                                    });
                               });
                         }
                       }),

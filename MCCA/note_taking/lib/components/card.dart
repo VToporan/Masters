@@ -18,6 +18,18 @@ class CardComponent extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Card(
+        color: ThemeColors.gruvLight,
+        shadowColor: Colors.transparent,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(
+            Radius.circular(10),
+          ),
+          side: BorderSide(
+            width: 2,
+            color: ThemeColors.gruvDark,
+          ),
+        ),
+        borderOnForeground: true,
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
@@ -25,7 +37,7 @@ class CardComponent extends StatelessWidget {
               title: Text(
                 title,
                 style: const TextStyle(
-                  fontSize: 14,
+                  fontSize: 20,
                   color: ThemeColors.gruvDark,
                 ),
                 softWrap: true,
@@ -35,7 +47,7 @@ class CardComponent extends StatelessWidget {
               subtitle: Text(
                 subTitle,
                 style: const TextStyle(
-                  fontSize: 14,
+                  fontSize: 16,
                   color: ThemeColors.gruvDark,
                 ),
                 softWrap: true,
