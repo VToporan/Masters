@@ -30,6 +30,9 @@ class _HomePageState extends State<HomePage> {
   late Login loginPage = const Login();
   late Register registerPage = const Register();
   late Account accountPage = const Account();
+  late String imageString = "";
+  late String textString = "";
+  late bool requireLatest = true;
 
   // FirebaseDatabase database = FirebaseDatabase.instance;
   // database.ref("users").set(FirebaseAuth.instance.currentUser?.uid) {
@@ -41,7 +44,16 @@ class _HomePageState extends State<HomePage> {
     gotoAccount: Icons.account_box_rounded,
   });
 
+  void gotoNotes() async {
+    setNotesValues();
+    setState(() {
+      currentPage = notesPage;
+      showNav = true;
+    });
+  }
+
   void gotoLogin() {
+    saveNoteValues();
     setState(() {
       currentPage = loginPage;
       showNav = false;
@@ -49,25 +61,15 @@ class _HomePageState extends State<HomePage> {
   }
 
   void gotoRegister() {
+    saveNoteValues();
     setState(() {
       currentPage = registerPage;
       showNav = false;
     });
   }
 
-  void gotoNotes() async {
-    setState(() {
-      currentPage = notesPage;
-      showNav = true;
-    });
-    String userID = FirebaseAuth.instance.currentUser!.uid;
-    DatabaseReference ref = FirebaseDatabase.instance.ref('users/$userID');
-    DataSnapshot data = await ref.child('latest').get();
-    var json = data.value as Map<Object?, Object?>;
-    notesPage.setValues(json['image'] as String, json['text'] as String);
-  }
-
   void gotoCalendar() {
+    saveNoteValues();
     setState(() {
       currentPage = calendarPage;
       showNav = true;
@@ -75,14 +77,49 @@ class _HomePageState extends State<HomePage> {
   }
 
   void gotoFiles() {
+    saveNoteValues();
     debugPrint("WIP");
   }
 
   void gotoAccount() {
+    saveNoteValues();
     setState(() {
       currentPage = accountPage;
       showNav = true;
     });
+  }
+
+  void setNotesValues() async {
+    await Future.delayed(const Duration(seconds: 1));
+    if (requireLatest) {
+      var json = await getLatestValues();
+      imageString = json['image'] as String;
+      textString = json['text'] as String;
+      notesPage.clearValues();
+      requireLatest = false;
+    }
+
+    notesPage.setValues(imageString, textString);
+  }
+
+  saveNoteValues() async {
+    await Future.delayed(const Duration(seconds: 1));
+    imageString = notesPage.getImage();
+    textString = notesPage.getText();
+  }
+
+  Future<Map> getLatestValues() async {
+    String userID = FirebaseAuth.instance.currentUser!.uid;
+    DatabaseReference ref = FirebaseDatabase.instance.ref('users/$userID');
+    DataSnapshot data = await ref.child('latest').get();
+    return data.value as Map;
+  }
+
+  @override
+  void setState(fn) {
+    if (mounted) {
+      super.setState(fn);
+    }
   }
 
   @override
@@ -93,10 +130,11 @@ class _HomePageState extends State<HomePage> {
 
     FirebaseAuth.instance.authStateChanges().listen((User? user) async {
       if (user == null) {
-        print("not logged");
+        debugPrint("not logged");
         gotoLogin();
       } else {
-        print("logged");
+        debugPrint("logged");
+
         DatabaseReference ref = FirebaseDatabase.instance.ref('users');
         final userSpace = await ref.child(user.uid).get();
         if (!userSpace.exists) {
@@ -108,6 +146,7 @@ class _HomePageState extends State<HomePage> {
             "calendar": "",
           });
         }
+
         gotoNotes();
       }
     });

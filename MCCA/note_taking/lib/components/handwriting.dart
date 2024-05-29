@@ -35,7 +35,7 @@ class HandWriting extends StatefulWidget {
   }
 
   void setImage(Uint8List image) {
-    if (image.isNotEmpty) painterController.setBackgroundImage(image);
+    painterController.setBackgroundImage(image);
   }
 
   @override
@@ -47,6 +47,13 @@ class _HandWritingState extends State<HandWriting> {
   void initState() {
     super.initState();
     widget.focus();
+  }
+
+  @override
+  void setState(fn) {
+    if (mounted) {
+      super.setState(fn);
+    }
   }
 
   @override

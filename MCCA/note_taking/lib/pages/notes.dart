@@ -24,10 +24,21 @@ class Notes extends StatefulWidget {
   State<Notes> createState() => _NotesState();
 
   void setValues(String image, String text) {
-    writingBox.clear();
-    writingBox.setImage(base64Decode(image));
-    inputBox.clear();
     inputBox.setText(text);
+    writingBox.setImage(base64Decode(image));
+  }
+
+  void clearValues() {
+    inputBox.clear();
+    writingBox.clear();
+  }
+
+  String getText() {
+    return inputBox.save();
+  }
+
+  String getImage() {
+    return writingBox.save();
   }
 }
 
@@ -369,6 +380,13 @@ class _NotesState extends State<Notes> {
   @override
   void initState() {
     super.initState();
+  }
+
+  @override
+  void setState(fn) {
+    if (mounted) {
+      super.setState(fn);
+    }
   }
 
   @override
