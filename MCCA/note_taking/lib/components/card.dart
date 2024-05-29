@@ -1,15 +1,20 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:note_taking/theme.dart';
+import 'package:thumbnailer/thumbnailer.dart';
 
 class CardComponent extends StatelessWidget {
   final String title;
   final String subTitle;
+  final String imageString;
   final Function() onTap;
 
   const CardComponent({
     super.key,
     required this.title,
     required this.subTitle,
+    required this.imageString,
     required this.onTap,
   });
 
@@ -34,6 +39,25 @@ class CardComponent extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             ListTile(
+              trailing: (imageString != "")
+                  ? Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          color: ThemeColors.gruvDark,
+                          width: 2,
+                        ),
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      child: Thumbnail(
+                        mimeType: 'image',
+                        widgetSize: 100,
+                        dataResolver: () async {
+                          return base64Decode(imageString);
+                        },
+                      ))
+                  : null,
               title: Text(
                 title,
                 style: const TextStyle(
@@ -42,7 +66,7 @@ class CardComponent extends StatelessWidget {
                 ),
                 softWrap: true,
                 maxLines: 2,
-                textAlign: TextAlign.end,
+                textAlign: TextAlign.left,
               ),
               subtitle: Text(
                 subTitle,
@@ -52,7 +76,7 @@ class CardComponent extends StatelessWidget {
                 ),
                 softWrap: true,
                 maxLines: 2,
-                textAlign: TextAlign.end,
+                textAlign: TextAlign.left,
               ),
             ),
           ],

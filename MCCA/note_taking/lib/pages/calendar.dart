@@ -8,6 +8,7 @@ import 'package:note_taking/components/slidable.dart';
 import 'package:note_taking/pages/home.dart';
 import 'package:note_taking/theme.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:thumbnailer/thumbnailer.dart';
 
 class Event {
   Event(
@@ -136,64 +137,70 @@ class _CalendarState extends State<Calendar> {
               const SizedBox(
                 height: 10,
               ),
-              Column(
-                children: [
-                  FutureBuilder(
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    FutureBuilder(
                       future: _getEventsForDay(_selectedDay),
                       builder: (context, future) {
                         if (!future.hasData || future.data!.isEmpty) {
                           return Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 40),
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 100),
                             child: CardComponent(
                               title: "No entries for this date",
                               subTitle: "",
+                              imageString: "",
                               onTap: () {},
                             ),
                           );
                         } else {
                           events = future.data!;
                           return ListView.builder(
-                              scrollDirection: Axis.vertical,
-                              shrinkWrap: true,
-                              itemCount: events.length,
-                              itemBuilder: (context, index) {
-                                Event event = events[index];
-                                return SlidableComponent(
-                                    cardTitle: event.timeStamp,
-                                    cardSubtitle: event.text,
-                                    onTap: () async {
-                                      String date = DateFormat('yyyy-MM-dd')
-                                          .format(_selectedDay);
-                                      String time = event.timeStamp;
-                                      String accessPoint =
-                                          'calendar/$date/$time';
-                                      HomePage.of(context)
-                                          ?.updateLatestAccess(accessPoint);
-                                      HomePage.of(context)?.updateNotesValues(
-                                          event.image, event.text);
-                                      HomePage.of(context)?.gotoNotes();
-                                    },
-                                    onDelete: (context) {
-                                      String date = DateFormat('yyyy-MM-dd')
-                                          .format(_selectedDay);
-                                      String time = event.timeStamp;
-                                      String accessPoint =
-                                          'calendar/$date/$time';
+                            scrollDirection: Axis.vertical,
+                            shrinkWrap: true,
+                            itemCount: events.length,
+                            itemBuilder: (context, index) {
+                              Event event = events[index];
+                              return SlidableComponent(
+                                cardTitle: event.timeStamp,
+                                cardSubtitle: event.text,
+                                cardImageString: event.image,
+                                onTap: () async {
+                                  String date = DateFormat('yyyy-MM-dd')
+                                      .format(_selectedDay);
+                                  String time = event.timeStamp;
+                                  String accessPoint = 'calendar/$date/$time';
+                                  HomePage.of(context)
+                                      ?.updateLatestAccess(accessPoint);
+                                  HomePage.of(context)?.updateNotesValues(
+                                      event.image, event.text);
+                                  HomePage.of(context)?.gotoNotes();
+                                },
+                                onDelete: (context) {
+                                  String date = DateFormat('yyyy-MM-dd')
+                                      .format(_selectedDay);
+                                  String time = event.timeStamp;
+                                  String accessPoint = 'calendar/$date/$time';
 
-                                      String userID = FirebaseAuth
-                                          .instance.currentUser!.uid;
-                                      DatabaseReference ref = FirebaseDatabase
-                                          .instance
-                                          .ref('users/$userID/$accessPoint');
-                                      ref.remove();
-                                      setState(() {
-                                        events.remove(event);
-                                      });
-                                    });
-                              });
+                                  String userID =
+                                      FirebaseAuth.instance.currentUser!.uid;
+                                  DatabaseReference ref = FirebaseDatabase
+                                      .instance
+                                      .ref('users/$userID/$accessPoint');
+                                  ref.remove();
+                                  setState(() {
+                                    events.remove(event);
+                                  });
+                                },
+                              );
+                            },
+                          );
                         }
-                      }),
-                ],
+                      },
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

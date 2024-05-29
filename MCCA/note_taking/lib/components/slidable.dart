@@ -6,6 +6,7 @@ import 'package:note_taking/theme.dart';
 class SlidableComponent extends StatelessWidget {
   final String cardTitle;
   final String cardSubtitle;
+  final String cardImageString;
   final Function() onTap;
   final Function(BuildContext) onDelete;
 
@@ -13,6 +14,7 @@ class SlidableComponent extends StatelessWidget {
     super.key,
     required this.cardTitle,
     required this.cardSubtitle,
+    required this.cardImageString,
     required this.onTap,
     required this.onDelete,
   });
@@ -20,7 +22,7 @@ class SlidableComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
+      padding: const EdgeInsets.symmetric(horizontal: 100),
       child: Slidable(
         key: key,
         startActionPane: ActionPane(
@@ -41,6 +43,7 @@ class SlidableComponent extends StatelessWidget {
         child: CardComponent(
           title: cardTitle,
           subTitle: cardSubtitle,
+          imageString: cardImageString,
           onTap: onTap,
         ),
       ),
