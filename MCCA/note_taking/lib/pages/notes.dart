@@ -19,6 +19,7 @@ class Notes extends StatefulWidget {
     textFocus: FocusNode(),
   );
   final HandWriting writingBox = HandWriting();
+  late String latestAccess = "latest";
 
   @override
   State<Notes> createState() => _NotesState();
@@ -26,6 +27,10 @@ class Notes extends StatefulWidget {
   void setValues(String image, String text) {
     inputBox.setText(text);
     writingBox.setImage(base64Decode(image));
+  }
+
+  void setLatest(String latest) {
+    latestAccess = latest;
   }
 
   void clearValues() {
@@ -74,7 +79,7 @@ class _NotesState extends State<Notes> {
                         String userID = FirebaseAuth.instance.currentUser!.uid;
                         DatabaseReference ref =
                             FirebaseDatabase.instance.ref('users/$userID');
-                        ref.child("latest").set({
+                        ref.child(widget.latestAccess).set({
                           "text": widget.inputBox.save(),
                           "image": widget.writingBox.save(),
                         });

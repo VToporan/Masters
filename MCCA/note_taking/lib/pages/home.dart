@@ -34,9 +34,6 @@ class _HomePageState extends State<HomePage> {
   late String textString = "";
   late bool requireLatest = true;
 
-  // FirebaseDatabase database = FirebaseDatabase.instance;
-  // database.ref("users").set(FirebaseAuth.instance.currentUser?.uid) {
-
   late final nav = HomeMenu(menuFunctions: {
     gotoNotes: Icons.edit_note_rounded,
     gotoCalendar: Icons.calendar_month_rounded,
@@ -102,10 +99,20 @@ class _HomePageState extends State<HomePage> {
     notesPage.setValues(imageString, textString);
   }
 
-  saveNoteValues() async {
+  void updateLatestAccess(String latest) {
+    notesPage.setLatest(latest);
+  }
+
+  void saveNoteValues() async {
     await Future.delayed(const Duration(seconds: 1));
     imageString = notesPage.getImage();
     textString = notesPage.getText();
+  }
+
+  void updateNotesValues(String newImage, String newText) async {
+    imageString = newImage;
+    textString = newText;
+    await Future.delayed(const Duration(seconds: 1));
   }
 
   Future<Map> getLatestValues() async {

@@ -8,6 +8,7 @@ import 'package:intl/intl.dart';
 import 'package:note_taking/components/card.dart';
 import 'package:note_taking/components/pageMenu.dart';
 import 'package:note_taking/components/slidable.dart';
+import 'package:note_taking/pages/home.dart';
 import 'package:note_taking/theme.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -60,7 +61,6 @@ class _CalendarState extends State<Calendar> {
     if (!times.exists) return [];
 
     var json = times.value as Map;
-    debugPrint(json.keys.toString());
 
     for (var timeStamp in json.keys) {
       Map<Object?, Object?> entry = json[timeStamp.toString()]!;
@@ -75,7 +75,7 @@ class _CalendarState extends State<Calendar> {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(40),
           child: Column(
             children: [
               TableCalendar(
@@ -138,28 +138,16 @@ class _CalendarState extends State<Calendar> {
               const SizedBox(
                 height: 10,
               ),
-              SlidableComponent(
-                cardTitle: "title",
-                cardSubtitle: "subtitle",
-                onTap: () {
-                  _getEventsForDay(_selectedDay);
-                },
-                onDelete: (context) {},
-              ),
               Column(
                 children: [
                   FutureBuilder(
                       future: _getEventsForDay(_selectedDay),
                       builder: (context, future) {
                         if (!future.hasData || future.data!.isEmpty) {
-                          return SlidableComponent(
-                            cardTitle: "No entries for this day",
-                            cardSubtitle: "",
-                            onTap: () {
-                              _getEventsForDay(_selectedDay);
-                            },
-                            onDelete: (context) {},
-                          );
+                          return CardComponent(
+                              title: "No entries for this date",
+                              subTitle: "",
+                              onTap: () {});
                         } else {
                           List<Event> events = future.data!;
                           return ListView.builder(
@@ -170,7 +158,19 @@ class _CalendarState extends State<Calendar> {
                                 return SlidableComponent(
                                     cardTitle: events[index].timeStamp,
                                     cardSubtitle: events[index].text,
-                                    onTap: () {},
+                                    onTap: () async {
+                                      String date = DateFormat('yyyy-MM-dd')
+                                          .format(_selectedDay);
+                                      String time = events[index].timeStamp;
+                                      String accessPoint =
+                                          'calendar/$date/$time';
+                                      HomePage.of(context)
+                                          ?.updateLatestAccess(accessPoint);
+                                      HomePage.of(context)?.updateNotesValues(
+                                          events[index].image,
+                                          events[index].text);
+                                      HomePage.of(context)?.gotoNotes();
+                                    },
                                     onDelete: (context) {});
                               });
                         }
